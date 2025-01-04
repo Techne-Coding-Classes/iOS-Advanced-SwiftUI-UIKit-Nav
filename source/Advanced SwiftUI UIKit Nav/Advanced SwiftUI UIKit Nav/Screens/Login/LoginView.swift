@@ -15,6 +15,10 @@ struct LoginView: View {
         VStack {
             Spacer()
             
+            Text("Weather App")
+                .font(.system(size: 25, weight: .bold))
+                .padding(.bottom, 55)
+            
             EmailField(value: $viewModel.email)
             
             PasswordField(value: $viewModel.password)
@@ -22,6 +26,7 @@ struct LoginView: View {
             Button("Submit") {
                 viewModel.onLoginTapped()
             }
+            .padding(.bottom, 50)
             
             Spacer()
             
@@ -41,5 +46,8 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(viewModel: .init())
+    NavigationStack {
+        LoginView(viewModel: .init())
+            .navigationBarTitleDisplayMode(.inline)
+    }
 }

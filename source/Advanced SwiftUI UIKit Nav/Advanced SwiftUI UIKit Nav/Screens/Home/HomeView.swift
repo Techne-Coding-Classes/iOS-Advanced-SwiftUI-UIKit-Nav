@@ -14,19 +14,7 @@ struct HomeView: View {
     var body: some View {
         VStack {
             
-            Spacer()
             
-            Text(viewModel.infoText)
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 10)
-            
-            Button("Fetch Secure Data") {
-            }
-            .padding(.bottom, 10)
-            
-            Button("Reset Text") {
-                viewModel.onResetInfoTextTapped()
-            }
             
             Spacer()
             

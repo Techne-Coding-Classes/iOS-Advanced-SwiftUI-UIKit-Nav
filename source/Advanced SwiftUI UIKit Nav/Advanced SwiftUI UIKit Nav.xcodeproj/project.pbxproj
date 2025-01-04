@@ -31,6 +31,7 @@
 		0838EA8F2D276B3D00DB4326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838EA852D276B3D00DB4326 /* AppDelegate.swift */; };
 		0838EA932D276B6E00DB4326 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838EA922D276B6E00DB4326 /* BaseCoordinator.swift */; };
 		0838EA962D276D8600DB4326 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838EA952D276D8600DB4326 /* ApplicationCoordinator.swift */; };
+		087EE7EF2D29CA4B00A870F6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087EE7EE2D29CA4B00A870F6 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		0838EA882D276B3D00DB4326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0838EA922D276B6E00DB4326 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		0838EA952D276D8600DB4326 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		087EE7EE2D29CA4B00A870F6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		08B0557A2D2984FE0012A74B /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
 		08B0557B2D2984FE0012A74B /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		08B0557C2D2984FE0012A74B /* DefaultTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextFieldStyle.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				08B0557A2D2984FE0012A74B /* EmailField.swift */,
+				087EE7EE2D29CA4B00A870F6 /* BackgroundView.swift */,
 				08B0557B2D2984FE0012A74B /* PasswordField.swift */,
 				08B0557D2D2984FE0012A74B /* TextField Styles */,
 			);
@@ -310,6 +313,7 @@
 				0838EA8F2D276B3D00DB4326 /* AppDelegate.swift in Sources */,
 				082BE5242D2985FA00B5B426 /* ModelLayer.swift in Sources */,
 				0838EA932D276B6E00DB4326 /* BaseCoordinator.swift in Sources */,
+				087EE7EF2D29CA4B00A870F6 /* BackgroundView.swift in Sources */,
 				082BE5132D29859500B5B426 /* FormError.swift in Sources */,
 				082BE53D2D298BE800B5B426 /* MainCoordinator.swift in Sources */,
 				082BE52E2D2988A500B5B426 /* LoginViewModel.swift in Sources */,
