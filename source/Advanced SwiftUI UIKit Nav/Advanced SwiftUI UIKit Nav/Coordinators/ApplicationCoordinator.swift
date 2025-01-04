@@ -14,17 +14,17 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
     
     let window: UIWindow
 
-    private override init(presenter: UINavigationController) {
+    private override init(presenter: UINavigationController, modelLayer: ModelLayer) {
         fatalError("ApplicationCoordinator: This init not used")
     }
 
-    init(window: UIWindow) {
+    init(window: UIWindow, modelLayer: ModelLayer) {
         self.window = window
 
         let presenter = UINavigationController()
         presenter.isToolbarHidden = true
 
-        super.init(presenter: presenter)
+        super.init(presenter: presenter, modelLayer: modelLayer)
 
         self.window.rootViewController = presenter
         self.window.makeKeyAndVisible()
@@ -44,7 +44,7 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
 private extension ApplicationCoordinator {
     
     func startMain() {
-        let mainCoordinator = MainCoordinator(presenter: presenter)
+        let mainCoordinator = MainCoordinator(presenter: presenter, modelLayer: modelLayer)
         mainCoordinator.delegate = self
         mainCoordinator.start()
         
@@ -52,7 +52,7 @@ private extension ApplicationCoordinator {
     }
     
     func startAuth() {
-        let authCoordinator = AuthCoordinator(presenter: presenter)
+        let authCoordinator = AuthCoordinator(presenter: presenter, modelLayer: modelLayer)
         authCoordinator.delegate = self
         authCoordinator.start()
         

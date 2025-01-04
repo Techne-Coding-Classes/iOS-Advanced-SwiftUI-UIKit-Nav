@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let modelLayer = appConfiguration.configureApp()
         
         let window = UIWindow()
-        appCoordinator = ApplicationCoordinator(window: window)
+        appCoordinator = ApplicationCoordinator(window: window, modelLayer: modelLayer)
         appCoordinator.start()
         
         return true
