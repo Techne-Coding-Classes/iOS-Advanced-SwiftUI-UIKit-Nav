@@ -15,7 +15,7 @@ protocol LoginNavDelegate: AnyObject {
 
 extension LoginView {
     
-    class ViewModel: ObservableObject {
+    class ViewModel: BaseViewModel, ObservableObject {
         
         @Published var email = ""
         @Published var password = ""

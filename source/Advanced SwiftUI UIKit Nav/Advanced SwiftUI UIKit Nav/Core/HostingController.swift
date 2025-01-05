@@ -8,13 +8,14 @@
 import SwiftUI
 import UIKit
 
-class HostingController<Content: View, VM: AnyObject>: UIHostingController<Content> {
+class HostingController<Content: View, VM: BaseViewModel>: UIHostingController<Content> {
     
     var viewModel: VM
     
     init(rootView: Content, viewModel: VM) {
         self.viewModel = viewModel
         super.init(rootView: rootView)
+        viewModel.hostingCongroller = self
     }
     
     required init?(coder aDecoder: NSCoder) {

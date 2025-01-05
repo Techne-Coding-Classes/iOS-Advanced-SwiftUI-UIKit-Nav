@@ -8,9 +8,13 @@
 import UIKit
 
 protocol MainCoordinatorDelegate: AnyObject {
-    
     func onMainCoordinationComplete(coordinator: MainCoordinator)
-    
+}
+
+enum NavigationBarTag: Int {
+    case home
+    case locations
+    case more
 }
 
 class MainCoordinator: BaseCoordinator<UINavigationController> {
@@ -18,22 +22,64 @@ class MainCoordinator: BaseCoordinator<UINavigationController> {
     weak var delegate: MainCoordinatorDelegate?
     
     override func start() {
-        showHomeScreen()
+        presenter.setNavigationBarHidden(true, animated: false)
+        let tabBarController = configureTabBarCongroller()
+        presenter.setViewControllers([tabBarController], animated: true)
     }
     
 }
 
-// MARK: - Showing Screens
+// MARK: - Tab Bar Configuration
 private extension MainCoordinator {
     
-    func showHomeScreen() {
-        let viewModel = HomeView.ViewModel()
-        viewModel.navDelegate = self
+    func configureTabBarCongroller() -> UITabBarController {
+        let homeCoordinator = configureHomeCoordinator()
+        let locationsCoordinator = configureLocationsCoordinator()
         
-        let view = HomeView(viewModel: viewModel)
-        let controller = HostingController(rootView: view, viewModel: viewModel)
-        controller.title = "Home"
-        presenter.setViewControllers([controller], animated: true)
+        let controllers = [
+            homeCoordinator.presenter,
+            locationsCoordinator.presenter
+        ]
+        
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers(controllers, animated: false)
+        
+        return tabBarController
+    }
+    
+}
+
+// MARK: - Sub Coordinators
+private extension MainCoordinator {
+    
+    func configureHomeCoordinator() -> HomeCoordinator {
+        let flowPresenter = UINavigationController()
+        flowPresenter.tabBarItem = UITabBarItem(
+            title: "Home",
+            image: UIImage(systemName: "house"),
+            tag: NavigationBarTag.home.rawValue
+        )
+        
+        let coordinator = HomeCoordinator(presenter: flowPresenter, modelLayer: modelLayer)
+        coordinator.start()
+        
+        store(coordinator: coordinator)
+        return coordinator
+    }
+    
+    func configureLocationsCoordinator() -> LocationsCoordinator {
+        let flowPresenter = UINavigationController()
+        flowPresenter.tabBarItem = UITabBarItem(
+            title: "Locs",
+            image: UIImage(systemName: "mappin.and.ellipse"),
+            tag: NavigationBarTag.locations.rawValue
+        )
+        
+        let coordinator = LocationsCoordinator(presenter: flowPresenter, modelLayer: modelLayer)
+        coordinator.start()
+        
+        store(coordinator: coordinator)
+        return coordinator
     }
     
 }

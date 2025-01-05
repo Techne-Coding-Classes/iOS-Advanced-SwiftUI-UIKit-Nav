@@ -16,7 +16,7 @@ struct LoginView: View {
             Spacer()
             
             Text("Weather App")
-                .font(.system(size: 25, weight: .bold))
+                .titleTextStyle()
                 .padding(.bottom, 55)
             
             EmailField(value: $viewModel.email)

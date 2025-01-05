@@ -14,7 +14,7 @@ protocol HomeNavDelegate: AnyObject {
 
 extension HomeView {
     
-    class ViewModel: ObservableObject {
+    class ViewModel: BaseViewModel, ObservableObject {
         let defaultInfoText = "Tap Fetch Button to fetch secured data."
         
         @Published var infoText = ""

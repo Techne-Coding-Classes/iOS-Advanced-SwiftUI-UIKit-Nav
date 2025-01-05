@@ -13,15 +13,9 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            
-            
-            
-            Spacer()
-            
-            Button("Logout") {
-                viewModel.onLogoutTapped()
-            }
-            .padding(.bottom, 10)
+
+            Text("Home Page")
+                .titleTextStyle()
             
         }
         .navigationTitle("Home")

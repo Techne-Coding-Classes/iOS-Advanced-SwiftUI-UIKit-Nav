@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		082BE5132D29859500B5B426 /* FormError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BE50F2D29859500B5B426 /* FormError.swift */; };
-		082BE5142D29859500B5B426 /* ConfigurationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BE50E2D29859500B5B426 /* ConfigurationError.swift */; };
-		082BE5152D29859500B5B426 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BE5112D29859500B5B426 /* NetworkError.swift */; };
-		082BE5162D29859500B5B426 /* KeyChainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BE5102D29859500B5B426 /* KeyChainError.swift */; };
 		082BE5242D2985FA00B5B426 /* ModelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BE5232D2985FA00B5B426 /* ModelLayer.swift */; };
 		082BE5272D29860B00B5B426 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BE5262D29860B00B5B426 /* Database.swift */; };
 		082BE52A2D29864800B5B426 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BE5292D29864800B5B426 /* AppConfiguration.swift */; };
@@ -31,15 +27,22 @@
 		0838EA8F2D276B3D00DB4326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838EA852D276B3D00DB4326 /* AppDelegate.swift */; };
 		0838EA932D276B6E00DB4326 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838EA922D276B6E00DB4326 /* BaseCoordinator.swift */; };
 		0838EA962D276D8600DB4326 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838EA952D276D8600DB4326 /* ApplicationCoordinator.swift */; };
+		086649852D2AF64600E7B3A0 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649842D2AF64600E7B3A0 /* HomeCoordinator.swift */; };
+		086649882D2AFB5600E7B3A0 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649872D2AFB5600E7B3A0 /* LocationsView.swift */; };
+		0866498A2D2AFB6400E7B3A0 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649892D2AFB6400E7B3A0 /* LocationsViewModel.swift */; };
+		0866498C2D2AFBB000E7B3A0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0866498B2D2AFBB000E7B3A0 /* BaseViewModel.swift */; };
+		0866498F2D2AFC8900E7B3A0 /* TextFieldStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0866498E2D2AFC8900E7B3A0 /* TextFieldStyles.swift */; };
+		086649912D2B06E700E7B3A0 /* LocationsHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649902D2B06E700E7B3A0 /* LocationsHostingController.swift */; };
+		086649932D2B082A00E7B3A0 /* LocationsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649922D2B082A00E7B3A0 /* LocationsCoordinator.swift */; };
+		086649972D2B093500E7B3A0 /* UpgradeCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649962D2B093500E7B3A0 /* UpgradeCoordinating.swift */; };
+		086649992D2B09B600E7B3A0 /* UpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649982D2B09B600E7B3A0 /* UpgradeView.swift */; };
+		0866499B2D2B09D800E7B3A0 /* UpgradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0866499A2D2B09D800E7B3A0 /* UpgradeViewModel.swift */; };
+		0866499D2D2B0B1A00E7B3A0 /* UpgradeHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0866499C2D2B0B1A00E7B3A0 /* UpgradeHostingController.swift */; };
 		087EE7EF2D29CA4B00A870F6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087EE7EE2D29CA4B00A870F6 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		082BE50D2D29859000B5B426 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
-		082BE50E2D29859500B5B426 /* ConfigurationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationError.swift; sourceTree = "<group>"; };
-		082BE50F2D29859500B5B426 /* FormError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormError.swift; sourceTree = "<group>"; };
-		082BE5102D29859500B5B426 /* KeyChainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainError.swift; sourceTree = "<group>"; };
-		082BE5112D29859500B5B426 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		082BE5232D2985FA00B5B426 /* ModelLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLayer.swift; sourceTree = "<group>"; };
 		082BE5262D29860B00B5B426 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		082BE5292D29864800B5B426 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
@@ -52,6 +55,17 @@
 		0838EA882D276B3D00DB4326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0838EA922D276B6E00DB4326 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		0838EA952D276D8600DB4326 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		086649842D2AF64600E7B3A0 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		086649872D2AFB5600E7B3A0 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		086649892D2AFB6400E7B3A0 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		0866498B2D2AFBB000E7B3A0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		0866498E2D2AFC8900E7B3A0 /* TextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyles.swift; sourceTree = "<group>"; };
+		086649902D2B06E700E7B3A0 /* LocationsHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsHostingController.swift; sourceTree = "<group>"; };
+		086649922D2B082A00E7B3A0 /* LocationsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsCoordinator.swift; sourceTree = "<group>"; };
+		086649962D2B093500E7B3A0 /* UpgradeCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeCoordinating.swift; sourceTree = "<group>"; };
+		086649982D2B09B600E7B3A0 /* UpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeView.swift; sourceTree = "<group>"; };
+		0866499A2D2B09D800E7B3A0 /* UpgradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeViewModel.swift; sourceTree = "<group>"; };
+		0866499C2D2B0B1A00E7B3A0 /* UpgradeHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeHostingController.swift; sourceTree = "<group>"; };
 		087EE7EE2D29CA4B00A870F6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		08B0557A2D2984FE0012A74B /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
 		08B0557B2D2984FE0012A74B /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
@@ -75,17 +89,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		082BE5122D29859500B5B426 /* Errors */ = {
-			isa = PBXGroup;
-			children = (
-				082BE50E2D29859500B5B426 /* ConfigurationError.swift */,
-				082BE50F2D29859500B5B426 /* FormError.swift */,
-				082BE5102D29859500B5B426 /* KeyChainError.swift */,
-				082BE5112D29859500B5B426 /* NetworkError.swift */,
-			);
-			path = Errors;
-			sourceTree = "<group>";
-		};
 		082BE5222D2985ED00B5B426 /* ModelLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +119,8 @@
 			children = (
 				082BE53A2D2989C100B5B426 /* AuthCoordinator.swift */,
 				082BE53C2D298BE800B5B426 /* MainCoordinator.swift */,
+				086649952D2B092400E7B3A0 /* Supporting */,
+				086649832D2AF63400E7B3A0 /* Tab Flows */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -144,7 +149,6 @@
 				082BE5282D29863800B5B426 /* Configuration */,
 				0838EA912D276B4100DB4326 /* Coordinators */,
 				08B0558D2D2985500012A74B /* Core */,
-				082BE5122D29859500B5B426 /* Errors */,
 				0838EA872D276B3D00DB4326 /* Info.plist */,
 				0838EA892D276B3D00DB4326 /* LaunchScreen.storyboard */,
 				082BE5222D2985ED00B5B426 /* ModelLayer */,
@@ -172,10 +176,48 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
+		086649832D2AF63400E7B3A0 /* Tab Flows */ = {
+			isa = PBXGroup;
+			children = (
+				086649842D2AF64600E7B3A0 /* HomeCoordinator.swift */,
+				086649922D2B082A00E7B3A0 /* LocationsCoordinator.swift */,
+			);
+			path = "Tab Flows";
+			sourceTree = "<group>";
+		};
+		086649862D2AFB4600E7B3A0 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				086649872D2AFB5600E7B3A0 /* LocationsView.swift */,
+				086649892D2AFB6400E7B3A0 /* LocationsViewModel.swift */,
+				086649902D2B06E700E7B3A0 /* LocationsHostingController.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		086649942D2B090600E7B3A0 /* Upgrade */ = {
+			isa = PBXGroup;
+			children = (
+				086649982D2B09B600E7B3A0 /* UpgradeView.swift */,
+				0866499A2D2B09D800E7B3A0 /* UpgradeViewModel.swift */,
+				0866499C2D2B0B1A00E7B3A0 /* UpgradeHostingController.swift */,
+			);
+			path = Upgrade;
+			sourceTree = "<group>";
+		};
+		086649952D2B092400E7B3A0 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				086649962D2B093500E7B3A0 /* UpgradeCoordinating.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		08B0557D2D2984FE0012A74B /* TextField Styles */ = {
 			isa = PBXGroup;
 			children = (
 				08B0557C2D2984FE0012A74B /* DefaultTextFieldStyle.swift */,
+				0866498E2D2AFC8900E7B3A0 /* TextFieldStyles.swift */,
 			);
 			path = "TextField Styles";
 			sourceTree = "<group>";
@@ -222,8 +264,10 @@
 			isa = PBXGroup;
 			children = (
 				08B055822D2985120012A74B /* Home */,
+				086649862D2AFB4600E7B3A0 /* Locations */,
 				08B055862D2985120012A74B /* Login */,
 				08B0558A2D2985120012A74B /* Register */,
+				086649942D2B090600E7B3A0 /* Upgrade */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -232,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				082BE50D2D29859000B5B426 /* HostingController.swift */,
+				0866498B2D2AFBB000E7B3A0 /* BaseViewModel.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -310,26 +355,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				082BE5372D2988C900B5B426 /* HostingController.swift in Sources */,
+				0866499D2D2B0B1A00E7B3A0 /* UpgradeHostingController.swift in Sources */,
 				0838EA8F2D276B3D00DB4326 /* AppDelegate.swift in Sources */,
 				082BE5242D2985FA00B5B426 /* ModelLayer.swift in Sources */,
 				0838EA932D276B6E00DB4326 /* BaseCoordinator.swift in Sources */,
 				087EE7EF2D29CA4B00A870F6 /* BackgroundView.swift in Sources */,
-				082BE5132D29859500B5B426 /* FormError.swift in Sources */,
+				086649972D2B093500E7B3A0 /* UpgradeCoordinating.swift in Sources */,
+				086649852D2AF64600E7B3A0 /* HomeCoordinator.swift in Sources */,
+				086649992D2B09B600E7B3A0 /* UpgradeView.swift in Sources */,
+				086649882D2AFB5600E7B3A0 /* LocationsView.swift in Sources */,
+				0866498A2D2AFB6400E7B3A0 /* LocationsViewModel.swift in Sources */,
 				082BE53D2D298BE800B5B426 /* MainCoordinator.swift in Sources */,
+				0866498F2D2AFC8900E7B3A0 /* TextFieldStyles.swift in Sources */,
 				082BE52E2D2988A500B5B426 /* LoginViewModel.swift in Sources */,
 				082BE5302D2988A500B5B426 /* LoginView.swift in Sources */,
-				082BE5142D29859500B5B426 /* ConfigurationError.swift in Sources */,
 				082BE52B2D2988A000B5B426 /* HomeViewModel.swift in Sources */,
 				082BE52C2D2988A000B5B426 /* HomeView.swift in Sources */,
-				082BE5152D29859500B5B426 /* NetworkError.swift in Sources */,
 				082BE52A2D29864800B5B426 /* AppConfiguration.swift in Sources */,
+				0866498C2D2AFBB000E7B3A0 /* BaseViewModel.swift in Sources */,
 				082BE5272D29860B00B5B426 /* Database.swift in Sources */,
-				082BE5162D29859500B5B426 /* KeyChainError.swift in Sources */,
 				082BE5312D2988AD00B5B426 /* RegisterView.swift in Sources */,
 				082BE5342D2988B400B5B426 /* EmailField.swift in Sources */,
+				086649912D2B06E700E7B3A0 /* LocationsHostingController.swift in Sources */,
 				082BE5352D2988B400B5B426 /* PasswordField.swift in Sources */,
+				086649932D2B082A00E7B3A0 /* LocationsCoordinator.swift in Sources */,
 				082BE5322D2988AD00B5B426 /* RegisterViewModel.swift in Sources */,
 				0838EA962D276D8600DB4326 /* ApplicationCoordinator.swift in Sources */,
+				0866499B2D2B09D800E7B3A0 /* UpgradeViewModel.swift in Sources */,
 				082BE53B2D2989C100B5B426 /* AuthCoordinator.swift in Sources */,
 				082BE5362D2988B900B5B426 /* DefaultTextFieldStyle.swift in Sources */,
 			);

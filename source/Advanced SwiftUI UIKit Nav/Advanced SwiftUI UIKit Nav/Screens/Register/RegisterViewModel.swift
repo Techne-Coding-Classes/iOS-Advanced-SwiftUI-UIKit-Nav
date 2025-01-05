@@ -15,7 +15,7 @@ protocol RegisterNavDelegate: AnyObject {
 
 extension RegisterView {
     
-    class ViewModel: ObservableObject {
+    class ViewModel: BaseViewModel, ObservableObject {
         
         @Published var email = ""
         @Published var password = ""

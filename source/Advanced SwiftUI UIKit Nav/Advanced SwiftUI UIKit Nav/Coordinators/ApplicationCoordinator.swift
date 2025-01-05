@@ -31,11 +31,7 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
     }
     
     override func start() {
-        if isLoggedIn {
-            startMain()
-        } else {
-            startAuth()
-        }
+        startMain()
     }
     
 }
