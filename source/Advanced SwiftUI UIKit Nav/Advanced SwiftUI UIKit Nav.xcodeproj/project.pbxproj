@@ -27,6 +27,9 @@
 		0838EA8F2D276B3D00DB4326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838EA852D276B3D00DB4326 /* AppDelegate.swift */; };
 		0838EA932D276B6E00DB4326 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838EA922D276B6E00DB4326 /* BaseCoordinator.swift */; };
 		0838EA962D276D8600DB4326 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0838EA952D276D8600DB4326 /* ApplicationCoordinator.swift */; };
+		08453B922D2DEC2F0016B2B1 /* MoreCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08453B912D2DEC2F0016B2B1 /* MoreCoordinating.swift */; };
+		08453B952D2DED1D0016B2B1 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08453B942D2DED1D0016B2B1 /* MoreView.swift */; };
+		08453B972D2DF2B30016B2B1 /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08453B962D2DF2B30016B2B1 /* MoreViewModel.swift */; };
 		086649852D2AF64600E7B3A0 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649842D2AF64600E7B3A0 /* HomeCoordinator.swift */; };
 		086649882D2AFB5600E7B3A0 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649872D2AFB5600E7B3A0 /* LocationsView.swift */; };
 		0866498A2D2AFB6400E7B3A0 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649892D2AFB6400E7B3A0 /* LocationsViewModel.swift */; };
@@ -55,6 +58,9 @@
 		0838EA882D276B3D00DB4326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0838EA922D276B6E00DB4326 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		0838EA952D276D8600DB4326 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		08453B912D2DEC2F0016B2B1 /* MoreCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinating.swift; sourceTree = "<group>"; };
+		08453B942D2DED1D0016B2B1 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		08453B962D2DF2B30016B2B1 /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		086649842D2AF64600E7B3A0 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		086649872D2AFB5600E7B3A0 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		086649892D2AFB6400E7B3A0 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
@@ -176,11 +182,21 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
+		08453B932D2DED020016B2B1 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				08453B942D2DED1D0016B2B1 /* MoreView.swift */,
+				08453B962D2DF2B30016B2B1 /* MoreViewModel.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		086649832D2AF63400E7B3A0 /* Tab Flows */ = {
 			isa = PBXGroup;
 			children = (
 				086649842D2AF64600E7B3A0 /* HomeCoordinator.swift */,
 				086649922D2B082A00E7B3A0 /* LocationsCoordinator.swift */,
+				08453B912D2DEC2F0016B2B1 /* MoreCoordinating.swift */,
 			);
 			path = "Tab Flows";
 			sourceTree = "<group>";
@@ -266,6 +282,7 @@
 				08B055822D2985120012A74B /* Home */,
 				086649862D2AFB4600E7B3A0 /* Locations */,
 				08B055862D2985120012A74B /* Login */,
+				08453B932D2DED020016B2B1 /* More */,
 				08B0558A2D2985120012A74B /* Register */,
 				086649942D2B090600E7B3A0 /* Upgrade */,
 			);
@@ -374,8 +391,11 @@
 				082BE52A2D29864800B5B426 /* AppConfiguration.swift in Sources */,
 				0866498C2D2AFBB000E7B3A0 /* BaseViewModel.swift in Sources */,
 				082BE5272D29860B00B5B426 /* Database.swift in Sources */,
+				08453B922D2DEC2F0016B2B1 /* MoreCoordinating.swift in Sources */,
 				082BE5312D2988AD00B5B426 /* RegisterView.swift in Sources */,
 				082BE5342D2988B400B5B426 /* EmailField.swift in Sources */,
+				08453B952D2DED1D0016B2B1 /* MoreView.swift in Sources */,
+				08453B972D2DF2B30016B2B1 /* MoreViewModel.swift in Sources */,
 				086649912D2B06E700E7B3A0 /* LocationsHostingController.swift in Sources */,
 				082BE5352D2988B400B5B426 /* PasswordField.swift in Sources */,
 				086649932D2B082A00E7B3A0 /* LocationsCoordinator.swift in Sources */,

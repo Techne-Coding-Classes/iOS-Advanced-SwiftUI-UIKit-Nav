@@ -8,6 +8,7 @@
 import Foundation
 
 protocol LocationsNavDelegate: AnyObject {
+    func onLocationsBackTapped()
     func onLocationsShowUpgradeScreen()
 }
 
@@ -17,12 +18,18 @@ extension LocationsView {
         
         weak var navDelegate: LocationsNavDelegate?
         
+        var showBackButton = false
+        
     }
     
 }
 
 // MARK: - Actions
 extension LocationsView.ViewModel {
+    
+    func onBackTapped() {
+        navDelegate?.onLocationsBackTapped()
+    }
     
     func onTappedUpgrade() {
         navDelegate?.onLocationsShowUpgradeScreen()

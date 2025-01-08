@@ -9,6 +9,8 @@ import UIKit
 
 class LocationsCoordinator: BaseCoordinator<UINavigationController>, UpgradeCoordinating {
     
+    var embeddedInExistingNavStack = false
+    
     override func start() {
         showLocationsScreen()
     }
@@ -26,7 +28,11 @@ private extension LocationsCoordinator {
         let controller = LocationsHostingController(rootView: view, viewModel: viewModel)
         controller.title = "Locations"
         
-        presenter.setViewControllers([controller], animated: false)
+        if embeddedInExistingNavStack {
+            presenter.setViewControllers([controller], animated: false)
+        } else {
+            presenter.pushViewController(controller, animated: true)
+        }
     }
     
 }

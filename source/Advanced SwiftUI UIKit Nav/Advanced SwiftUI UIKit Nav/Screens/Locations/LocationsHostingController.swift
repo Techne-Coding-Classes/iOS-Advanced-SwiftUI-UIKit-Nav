@@ -23,6 +23,9 @@ extension LocationsHostingController {
 private extension LocationsHostingController {
     
     func setupViews() {
+        
+        
+        // Upgrade Button
         let image = UIImage(systemName: "crown")?.withTintColor(.black, renderingMode: .alwaysOriginal)
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: image,
@@ -36,6 +39,10 @@ private extension LocationsHostingController {
 
 // MARK: - Actions
 extension LocationsHostingController {
+    
+    @objc func onBackTapped() {
+        viewModel.onBackTapped()
+    }
     
     @objc func onTappedUpgradeButton() {
         viewModel.onTappedUpgrade()
