@@ -33,6 +33,9 @@ private extension LocationsHostingController {
             target: self,
             action: #selector(onTappedUpgradeButton)
         )
+        
+        guard viewModel.showBackButton else { return }
+        setCustomBackButton(target: self, selector: #selector(onBackTapped))
     }
     
 }

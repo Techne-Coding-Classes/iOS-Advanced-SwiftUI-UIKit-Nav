@@ -16,6 +16,7 @@ struct LocationsView: View {
             Text("Weather Locations")
                 .titleTextStyle()
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

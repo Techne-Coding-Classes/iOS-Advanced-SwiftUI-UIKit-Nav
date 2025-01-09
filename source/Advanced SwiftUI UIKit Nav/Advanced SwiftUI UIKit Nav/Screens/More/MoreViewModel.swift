@@ -26,11 +26,11 @@ extension MoreView {
 extension MoreView.ViewModel {
     
     func onLocationsTapped() {
-        
+        navDelegate?.onMoreViewLocationsTapped()
     }
     
     func onUpgradeTapped() {
-        
+        navDelegate?.onMoreViewUpgradeTapped()
     }
     
 }

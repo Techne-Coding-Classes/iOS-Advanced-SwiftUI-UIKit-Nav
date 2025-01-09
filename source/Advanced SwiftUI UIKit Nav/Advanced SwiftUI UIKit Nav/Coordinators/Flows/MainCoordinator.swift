@@ -35,10 +35,12 @@ private extension MainCoordinator {
     func configureTabBarCongroller() -> UITabBarController {
         let homeCoordinator = configureHomeCoordinator()
         let locationsCoordinator = configureLocationsCoordinator()
+        let moreCoordinator = configureMoreCoordinator()
         
         let controllers = [
             homeCoordinator.presenter,
-            locationsCoordinator.presenter
+            locationsCoordinator.presenter,
+            moreCoordinator.presenter
         ]
         
         let tabBarController = UITabBarController()
@@ -76,6 +78,21 @@ private extension MainCoordinator {
         )
         
         let coordinator = LocationsCoordinator(presenter: flowPresenter, modelLayer: modelLayer)
+        coordinator.start()
+        
+        store(coordinator: coordinator)
+        return coordinator
+    }
+    
+    func configureMoreCoordinator() -> MoreCoordinator {
+        let flowPresenter = UINavigationController()
+        flowPresenter.tabBarItem = UITabBarItem(
+            title: "More",
+            image: UIImage(systemName: "line.3.horizontal"),
+            tag: NavigationBarTag.more.rawValue
+        )
+        
+        let coordinator = MoreCoordinator(presenter: flowPresenter, modelLayer: modelLayer)
         coordinator.start()
         
         store(coordinator: coordinator)
