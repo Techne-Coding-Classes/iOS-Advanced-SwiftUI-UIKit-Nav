@@ -23,8 +23,6 @@ extension LocationsHostingController {
 private extension LocationsHostingController {
     
     func setupViews() {
-        
-        
         // Upgrade Button
         let image = UIImage(systemName: "crown")?.withTintColor(.black, renderingMode: .alwaysOriginal)
         navigationItem.rightBarButtonItem = UIBarButtonItem(

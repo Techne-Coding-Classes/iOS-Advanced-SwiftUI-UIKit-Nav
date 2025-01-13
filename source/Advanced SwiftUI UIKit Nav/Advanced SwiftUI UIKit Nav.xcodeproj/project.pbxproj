@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0822D2862D35DCD200A327D2 /* EditAccountHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822D2852D35DCD200A327D2 /* EditAccountHostingController.swift */; };
+		0822D2892D35DE0000A327D2 /* ConfirmEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822D2882D35DE0000A327D2 /* ConfirmEmailView.swift */; };
+		0822D28B2D35DF8A00A327D2 /* ConfirmEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822D28A2D35DF8A00A327D2 /* ConfirmEmailViewModel.swift */; };
+		0822D28D2D35E02300A327D2 /* ConfirmEmailHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0822D28C2D35E02300A327D2 /* ConfirmEmailHostingController.swift */; };
 		082BE5242D2985FA00B5B426 /* ModelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BE5232D2985FA00B5B426 /* ModelLayer.swift */; };
 		082BE5272D29860B00B5B426 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BE5262D29860B00B5B426 /* Database.swift */; };
 		082BE52A2D29864800B5B426 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082BE5292D29864800B5B426 /* AppConfiguration.swift */; };
@@ -41,11 +45,21 @@
 		086649992D2B09B600E7B3A0 /* UpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086649982D2B09B600E7B3A0 /* UpgradeView.swift */; };
 		0866499B2D2B09D800E7B3A0 /* UpgradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0866499A2D2B09D800E7B3A0 /* UpgradeViewModel.swift */; };
 		0866499D2D2B0B1A00E7B3A0 /* UpgradeHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0866499C2D2B0B1A00E7B3A0 /* UpgradeHostingController.swift */; };
+		0878896E2D3429C300601078 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0878896D2D3429C300601078 /* AccountView.swift */; };
+		087889702D3429E700601078 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0878896F2D3429E700601078 /* AccountViewModel.swift */; };
+		087889722D342C9A00601078 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087889712D342C9A00601078 /* ListRow.swift */; };
+		087889742D342D7C00601078 /* AccountHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087889732D342D7C00601078 /* AccountHostingController.swift */; };
+		087889772D342F5B00601078 /* EditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087889762D342F5B00601078 /* EditAccountView.swift */; };
+		087889792D342F6800601078 /* EditAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087889782D342F6800601078 /* EditAccountViewModel.swift */; };
 		087EE7EF2D29CA4B00A870F6 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087EE7EE2D29CA4B00A870F6 /* BackgroundView.swift */; };
 		08C819C62D2F637D00F0205B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C819C52D2F637D00F0205B /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0822D2852D35DCD200A327D2 /* EditAccountHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountHostingController.swift; sourceTree = "<group>"; };
+		0822D2882D35DE0000A327D2 /* ConfirmEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailView.swift; sourceTree = "<group>"; };
+		0822D28A2D35DF8A00A327D2 /* ConfirmEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailViewModel.swift; sourceTree = "<group>"; };
+		0822D28C2D35E02300A327D2 /* ConfirmEmailHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailHostingController.swift; sourceTree = "<group>"; };
 		082BE50D2D29859000B5B426 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		082BE5232D2985FA00B5B426 /* ModelLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLayer.swift; sourceTree = "<group>"; };
 		082BE5262D29860B00B5B426 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -73,6 +87,12 @@
 		086649982D2B09B600E7B3A0 /* UpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeView.swift; sourceTree = "<group>"; };
 		0866499A2D2B09D800E7B3A0 /* UpgradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeViewModel.swift; sourceTree = "<group>"; };
 		0866499C2D2B0B1A00E7B3A0 /* UpgradeHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeHostingController.swift; sourceTree = "<group>"; };
+		0878896D2D3429C300601078 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		0878896F2D3429E700601078 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		087889712D342C9A00601078 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
+		087889732D342D7C00601078 /* AccountHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHostingController.swift; sourceTree = "<group>"; };
+		087889762D342F5B00601078 /* EditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountView.swift; sourceTree = "<group>"; };
+		087889782D342F6800601078 /* EditAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewModel.swift; sourceTree = "<group>"; };
 		087EE7EE2D29CA4B00A870F6 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		08B0557A2D2984FE0012A74B /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
 		08B0557B2D2984FE0012A74B /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
@@ -97,6 +117,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0822D2872D35DDE600A327D2 /* Confirm Email */ = {
+			isa = PBXGroup;
+			children = (
+				0822D2882D35DE0000A327D2 /* ConfirmEmailView.swift */,
+				0822D28A2D35DF8A00A327D2 /* ConfirmEmailViewModel.swift */,
+				0822D28C2D35E02300A327D2 /* ConfirmEmailHostingController.swift */,
+			);
+			path = "Confirm Email";
+			sourceTree = "<group>";
+		};
 		082BE5222D2985ED00B5B426 /* ModelLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +262,35 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
+		0878896B2D34298800601078 /* Account Screens */ = {
+			isa = PBXGroup;
+			children = (
+				087889752D342E9800601078 /* Edit Account */,
+				0878896C2D3429B200601078 /* Account */,
+			);
+			path = "Account Screens";
+			sourceTree = "<group>";
+		};
+		0878896C2D3429B200601078 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				0878896D2D3429C300601078 /* AccountView.swift */,
+				0878896F2D3429E700601078 /* AccountViewModel.swift */,
+				087889732D342D7C00601078 /* AccountHostingController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		087889752D342E9800601078 /* Edit Account */ = {
+			isa = PBXGroup;
+			children = (
+				087889762D342F5B00601078 /* EditAccountView.swift */,
+				087889782D342F6800601078 /* EditAccountViewModel.swift */,
+				0822D2852D35DCD200A327D2 /* EditAccountHostingController.swift */,
+			);
+			path = "Edit Account";
+			sourceTree = "<group>";
+		};
 		08B0557D2D2984FE0012A74B /* TextField Styles */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				08B0557A2D2984FE0012A74B /* EmailField.swift */,
+				087889712D342C9A00601078 /* ListRow.swift */,
 				087EE7EE2D29CA4B00A870F6 /* BackgroundView.swift */,
 				08B0557B2D2984FE0012A74B /* PasswordField.swift */,
 				08B0557D2D2984FE0012A74B /* TextField Styles */,
@@ -282,6 +342,8 @@
 		08B0558B2D2985120012A74B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				0822D2872D35DDE600A327D2 /* Confirm Email */,
+				0878896B2D34298800601078 /* Account Screens */,
 				08B055822D2985120012A74B /* Home */,
 				086649862D2AFB4600E7B3A0 /* Locations */,
 				08B055862D2985120012A74B /* Login */,
@@ -386,7 +448,11 @@
 				0866499D2D2B0B1A00E7B3A0 /* UpgradeHostingController.swift in Sources */,
 				0838EA8F2D276B3D00DB4326 /* AppDelegate.swift in Sources */,
 				082BE5242D2985FA00B5B426 /* ModelLayer.swift in Sources */,
+				0878896E2D3429C300601078 /* AccountView.swift in Sources */,
+				0822D28B2D35DF8A00A327D2 /* ConfirmEmailViewModel.swift in Sources */,
 				0838EA932D276B6E00DB4326 /* BaseCoordinator.swift in Sources */,
+				087889772D342F5B00601078 /* EditAccountView.swift in Sources */,
+				087889742D342D7C00601078 /* AccountHostingController.swift in Sources */,
 				087EE7EF2D29CA4B00A870F6 /* BackgroundView.swift in Sources */,
 				086649972D2B093500E7B3A0 /* UpgradeCoordinating.swift in Sources */,
 				086649852D2AF64600E7B3A0 /* HomeCoordinator.swift in Sources */,
@@ -399,22 +465,28 @@
 				082BE5302D2988A500B5B426 /* LoginView.swift in Sources */,
 				082BE52B2D2988A000B5B426 /* HomeViewModel.swift in Sources */,
 				082BE52C2D2988A000B5B426 /* HomeView.swift in Sources */,
+				087889792D342F6800601078 /* EditAccountViewModel.swift in Sources */,
 				082BE52A2D29864800B5B426 /* AppConfiguration.swift in Sources */,
 				08C819C62D2F637D00F0205B /* UIViewControllerExtensions.swift in Sources */,
 				0866498C2D2AFBB000E7B3A0 /* BaseViewModel.swift in Sources */,
 				082BE5272D29860B00B5B426 /* Database.swift in Sources */,
+				087889702D3429E700601078 /* AccountViewModel.swift in Sources */,
+				087889722D342C9A00601078 /* ListRow.swift in Sources */,
 				08453B922D2DEC2F0016B2B1 /* MoreCoordinator.swift in Sources */,
 				082BE5312D2988AD00B5B426 /* RegisterView.swift in Sources */,
 				082BE5342D2988B400B5B426 /* EmailField.swift in Sources */,
 				08453B952D2DED1D0016B2B1 /* MoreView.swift in Sources */,
+				0822D2862D35DCD200A327D2 /* EditAccountHostingController.swift in Sources */,
 				08453B972D2DF2B30016B2B1 /* MoreViewModel.swift in Sources */,
 				086649912D2B06E700E7B3A0 /* LocationsHostingController.swift in Sources */,
 				082BE5352D2988B400B5B426 /* PasswordField.swift in Sources */,
+				0822D28D2D35E02300A327D2 /* ConfirmEmailHostingController.swift in Sources */,
 				086649932D2B082A00E7B3A0 /* LocationsCoordinator.swift in Sources */,
 				082BE5322D2988AD00B5B426 /* RegisterViewModel.swift in Sources */,
 				0838EA962D276D8600DB4326 /* ApplicationCoordinator.swift in Sources */,
 				0866499B2D2B09D800E7B3A0 /* UpgradeViewModel.swift in Sources */,
 				082BE53B2D2989C100B5B426 /* AuthCoordinator.swift in Sources */,
+				0822D2892D35DE0000A327D2 /* ConfirmEmailView.swift in Sources */,
 				082BE5362D2988B900B5B426 /* DefaultTextFieldStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
