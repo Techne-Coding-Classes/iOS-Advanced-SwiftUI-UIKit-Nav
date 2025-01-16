@@ -10,6 +10,7 @@ import Foundation
 protocol LocationsNavDelegate: AnyObject {
     func onLocationsBackTapped()
     func onLocationsShowUpgradeScreen()
+    func onLocationsYourAccountTapped()
 }
 
 extension LocationsView {
@@ -33,6 +34,10 @@ extension LocationsView.ViewModel {
     
     func onTappedUpgrade() {
         navDelegate?.onLocationsShowUpgradeScreen()
+    }
+    
+    func onYourAccountTapped() {
+        navDelegate?.onLocationsYourAccountTapped()
     }
     
 }

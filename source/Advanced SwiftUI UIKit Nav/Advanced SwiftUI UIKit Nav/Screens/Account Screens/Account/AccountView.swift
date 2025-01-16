@@ -13,30 +13,39 @@ private enum Constants {
 }
 
 struct AccountView: View {
+    
+    @StateObject var viewModel: ViewModel
+    
     var body: some View {
-        ScrollView {
-            VStack {
-                ZStack {
-                    Circle()
-                        .foregroundStyle(.gray.opacity(0.5))
+        VStack {
+            ScrollView {
+                VStack {
+                    ZStack {
+                        Circle()
+                            .foregroundStyle(.gray.opacity(0.5))
+                        
+                        Image(systemName: "person.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: Constants.avatarSize, height: Constants.avatarSize)
+                    }
+                    .frame(width: Constants.avatarBackgroundSize, height: Constants.avatarBackgroundSize)
                     
-                    Image(systemName: "person.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: Constants.avatarSize, height: Constants.avatarSize)
+                    Text("John Smith")
+                        .padding(.top, 20)
+                    
+                    Spacer()
+                        .frame(height: 100)
+                    
+                    ListRow(title: "Email", trailingText: "john@example.com")
                 }
-                .frame(width: Constants.avatarBackgroundSize, height: Constants.avatarBackgroundSize)
-                
-                Text("John Smith")
-                    .padding(.top, 20)
-                
-                Spacer()
-                    .frame(height: 100)
-                
-                ListRow(title: "Email", trailingText: "john@example.com")
-
+                .padding(.top, 20)
             }
-            .padding(.top, 20)
+            
+            Button("Edit Account") {
+                viewModel.onEditTapped()
+            }
+            .padding(.bottom, 20)
         }
         .navigationBarBackButtonHidden()
 
@@ -44,5 +53,5 @@ struct AccountView: View {
 }
 
 #Preview {
-    AccountView()
+    AccountView(viewModel: .init())
 }

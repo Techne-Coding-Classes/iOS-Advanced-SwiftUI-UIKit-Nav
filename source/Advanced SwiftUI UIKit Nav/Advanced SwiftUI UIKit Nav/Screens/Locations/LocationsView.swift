@@ -11,11 +11,31 @@ struct LocationsView: View {
     
     @StateObject var viewModel: ViewModel
     
+    private let locations = [
+        "Syndney, Australia",
+        "New York, New York",
+        "Ontario, Canada",
+        "Houston, Texas"
+    ]
+    
     var body: some View {
-        VStack {
-            Text("Weather Locations")
-                .titleTextStyle()
+        ScrollView {
+            VStack {
+                ForEach(Array(locations.enumerated()), id: \.offset) { _, location in
+                    ListRow(title: location)
+                }
+                
+                Text("Sync Locations by Logging In")
+                    .titleTextStyle()
+                    .padding(.top, 10)
+                
+                Button("Your Account") {
+                    viewModel.onYourAccountTapped()
+                }
+                .padding(.top, 10)
+            }
         }
+
         .navigationBarBackButtonHidden()
     }
 }

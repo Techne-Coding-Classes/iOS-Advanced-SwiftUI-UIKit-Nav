@@ -25,10 +25,11 @@ private extension AccountHostingController {
     func setupViews() {
         title = "Account"
         
-        let editIcon = UIImage(systemName: "pencil")?.withTintColor(.green, renderingMode: .alwaysOriginal)
-        let editButton = UIBarButtonItem(image: editIcon, style: .plain, target: self, action: #selector(onEditAccountTapped))
-        
-        setCustomBackButton(target: self, selector: #selector(onBackButtonTapped))
+        if viewModel.showExitButton {
+            setNavigationExitButton(target: self, selector: #selector(onExitButtonTapped))
+        } else {
+            setCustomBackButton(target: self, selector: #selector(onBackButtonTapped))
+        }
     }
     
 }
@@ -40,8 +41,9 @@ extension AccountHostingController {
         viewModel.onBackTapped()
     }
     
-    @objc func onEditAccountTapped() {
-        viewModel.onEditTapped()
+    @objc func onExitButtonTapped() {
+        viewModel.onExitTapped()
     }
+    
     
 }

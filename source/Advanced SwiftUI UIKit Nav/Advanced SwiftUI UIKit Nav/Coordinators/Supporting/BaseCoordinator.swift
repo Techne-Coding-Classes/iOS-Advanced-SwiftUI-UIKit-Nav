@@ -14,6 +14,8 @@ import UIKit
  */
 class BaseCoordinator<ControllerType> where ControllerType: UIViewController {
 
+    private(set) var embeddedInExistingNavStack = false
+    
     let id = UUID()
 
     private(set) var childCoordinators = [UUID:Any]()
@@ -30,7 +32,9 @@ class BaseCoordinator<ControllerType> where ControllerType: UIViewController {
      The method to be called to start main coordination for the subclass.
      */
     func start() {
-        preconditionFailure("Start method not implemented")
+        if let navController = presenter as? UINavigationController {
+            embeddedInExistingNavStack = navController.viewControllers.count > 0
+        }
     }
 }
 
@@ -110,4 +114,27 @@ extension BaseCoordinator {
         return nil
     }
 
+}
+
+// MARK: - Utils
+extension BaseCoordinator {
+    
+    /// If this coordinator is embedded in another navigation flow then this will push the viewController
+    /// onto the stack. If this coordinator is not embedded in another navigation flow then this will
+    /// add the controller as the root of the navigation stack without animation.
+    ///
+    /// If the presenter is not a UINavigationController this will present the controller modally.
+    func pushControllerBasedOnEmbeddedNavState(controller: UIViewController) {
+        guard let navController = presenter as? UINavigationController else {
+            presenter.present(controller, animated: true)
+            return
+        }
+        
+        if embeddedInExistingNavStack {
+            navController.pushViewController(controller, animated: true)
+        } else {
+            navController.setViewControllers([controller], animated: false)
+        }
+    }
+    
 }

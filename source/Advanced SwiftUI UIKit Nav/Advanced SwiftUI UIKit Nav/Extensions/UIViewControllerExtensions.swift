@@ -18,4 +18,10 @@ extension UIViewController {
         navigationItem.leftBarButtonItem = backButton
     }
     
+    func setNavigationExitButton(target: Any?, selector: Selector) {
+        let closeIcon = UIImage(systemName: "xmark")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        let closeButton = UIBarButtonItem(image: closeIcon, style: .plain, target: target, action: selector)
+        navigationItem.rightBarButtonItem = closeButton
+    }
+    
 }

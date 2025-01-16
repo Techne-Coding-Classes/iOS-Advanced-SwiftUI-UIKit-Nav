@@ -12,13 +12,11 @@ protocol LocationsCoordinatorDelegate: AnyObject {
 }
 
 class LocationsCoordinator: BaseCoordinator<UINavigationController>, UpgradeCoordinating {
-    
-    private var embeddedInExistingNavStack = false
-    
+        
     weak var delegate: LocationsCoordinatorDelegate?
     
     override func start() {
-        embeddedInExistingNavStack = presenter.viewControllers.count > 0
+        super.start()
         showLocationsScreen()
     }
     
@@ -36,11 +34,7 @@ private extension LocationsCoordinator {
         let controller = LocationsHostingController(rootView: view, viewModel: viewModel)
         controller.title = "Locations"
         
-        if embeddedInExistingNavStack {
-            presenter.pushViewController(controller, animated: true)
-        } else {
-            presenter.setViewControllers([controller], animated: false)
-        }
+        pushControllerBasedOnEmbeddedNavState(controller: controller)
     }
     
 }
@@ -58,6 +52,10 @@ extension LocationsCoordinator: LocationsNavDelegate {
     
     func onLocationsShowUpgradeScreen() {
         showUpgradeScreen()
+    }
+    
+    func onLocationsYourAccountTapped() {
+        
     }
     
 }

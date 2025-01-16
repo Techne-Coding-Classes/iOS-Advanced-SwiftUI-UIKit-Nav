@@ -9,6 +9,7 @@ import Foundation
 
 protocol AccountNavDelegate: AnyObject {
     func onAccountBackTapped()
+    func onAccountExitTapped()
     func onAccountEditTapped()
 }
 
@@ -17,6 +18,8 @@ extension AccountView {
     class ViewModel: BaseViewModel, ObservableObject {
         
         weak var navDelegate: AccountNavDelegate?
+        
+        var showExitButton = false
         
     }
     
@@ -31,6 +34,10 @@ extension AccountView.ViewModel {
     
     func onEditTapped() {
         navDelegate?.onAccountBackTapped()
+    }
+    
+    func onExitTapped() {
+        navDelegate?.onAccountExitTapped()
     }
     
 }
