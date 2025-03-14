@@ -33,6 +33,11 @@ struct ConfirmEmailView: View {
             .padding(.top, 30)
         }
         .navigationBarBackButtonHidden()
+        .alert("Code Submitted", isPresented: $viewModel.showSubmittedAlert) {
+            Button("OK", role: .none) {
+                viewModel.onConfirmSubmit()
+            }
+        }
     }
 }
 

@@ -18,9 +18,9 @@ extension ConfirmEmailView {
     class ViewModel: BaseViewModel, ObservableObject {
         
         @Published var emailCode = "12345"
+        @Published var showSubmittedAlert = false
         
         weak var navDelegate: ConfirmEmailNavDelegate?
-        
     }
     
 }
@@ -29,6 +29,10 @@ extension ConfirmEmailView {
 extension ConfirmEmailView.ViewModel {
     
     func onSubmitTapped() {
+        showSubmittedAlert = true
+    }
+    
+    func onConfirmSubmit() {
         navDelegate?.onConfirmEmailSubmit()
     }
     

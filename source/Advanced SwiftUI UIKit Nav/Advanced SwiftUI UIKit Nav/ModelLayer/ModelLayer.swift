@@ -9,10 +9,29 @@ import Foundation
 
 class ModelLayer {
     
-    let database: Database
+    let dataLayer: DataLayer
+    let systemLayer: SystemLayer
     
-    init(database: Database) {
-        self.database = database
+    init(dataLayer: DataLayer, systemLayer: SystemLayer) {
+        self.dataLayer = dataLayer
+        self.systemLayer = systemLayer
+    }
+    
+}
+
+// MARK: - Convenience
+extension ModelLayer {
+    
+    var userDefaults: UserDefaultsManager { systemLayer.userDefaultsManager }
+    
+}
+
+// MARK: - Utils
+extension ModelLayer {
+    
+    func logout() {
+        dataLayer.logout()
+        systemLayer.logout()
     }
     
 }

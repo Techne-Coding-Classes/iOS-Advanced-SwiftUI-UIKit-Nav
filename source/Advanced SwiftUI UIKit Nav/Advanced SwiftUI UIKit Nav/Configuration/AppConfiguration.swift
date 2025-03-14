@@ -26,8 +26,10 @@ class AppConfiguration {
 private extension AppConfiguration {
     
     func configureModelLayer() -> ModelLayer {
-        let database = Database()
-        return ModelLayer(database: database)
+        let dataLayer = DataLayer(database: .init())
+        let systemLayer = SystemLayer(userDefaultsManager: .init())
+        
+        return ModelLayer(dataLayer: dataLayer, systemLayer: systemLayer)
     }
     
 }

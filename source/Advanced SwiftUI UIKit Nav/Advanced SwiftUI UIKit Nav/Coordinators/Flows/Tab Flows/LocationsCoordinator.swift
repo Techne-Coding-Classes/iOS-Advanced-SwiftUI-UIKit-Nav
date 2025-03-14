@@ -39,7 +39,6 @@ private extension LocationsCoordinator {
     
 }
 
-
 // MARK: - LocationsNavDelegate
 extension LocationsCoordinator: LocationsNavDelegate {
     

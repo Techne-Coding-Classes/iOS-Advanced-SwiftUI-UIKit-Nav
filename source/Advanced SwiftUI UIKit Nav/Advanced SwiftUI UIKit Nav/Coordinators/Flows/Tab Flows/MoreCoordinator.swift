@@ -40,10 +40,18 @@ private extension MoreCoordinator {
         store(coordinator: coordinator)
     }
     
+    func startAccountFlow() {
+        
+    }
+    
 }
 
 // MARK: - MoreViewNavDelegate
 extension MoreCoordinator: MoreViewNavDelegate {
+    
+    func onMoreViewAccountTapped() {
+        
+    }
     
     func onMoreViewLocationsTapped() {
         startLocationsFlow()

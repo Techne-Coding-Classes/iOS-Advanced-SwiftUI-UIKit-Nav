@@ -38,6 +38,14 @@ class BaseCoordinator<ControllerType> where ControllerType: UIViewController {
     }
 }
 
+// MARK: - Convenience
+extension BaseCoordinator {
+    
+    var database: Database { modelLayer.dataLayer.database }
+    var userDefaults: UserDefaultsManager { modelLayer.systemLayer.userDefaultsManager }
+    
+}
+
 //MARK: - Child Coordinator Management
 extension BaseCoordinator {
 

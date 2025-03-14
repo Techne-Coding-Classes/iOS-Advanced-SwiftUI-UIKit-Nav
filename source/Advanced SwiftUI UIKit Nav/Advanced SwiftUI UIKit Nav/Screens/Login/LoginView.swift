@@ -15,7 +15,7 @@ struct LoginView: View {
         VStack {
             Spacer()
             
-            Text("Weather App")
+            Text("Navigation App")
                 .titleTextStyle()
                 .padding(.bottom, 55)
             

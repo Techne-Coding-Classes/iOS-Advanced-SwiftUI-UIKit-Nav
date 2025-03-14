@@ -8,5 +8,5 @@
 import UIKit
 
 class BaseViewModel {
-    weak var hostingCongroller: UIViewController?
+    weak var hostingController: UIViewController?
 }

@@ -8,6 +8,7 @@
 import Foundation
 
 protocol MoreViewNavDelegate: AnyObject {
+    func onMoreViewAccountTapped()
     func onMoreViewLocationsTapped()
     func onMoreViewUpgradeTapped()
 }
@@ -24,6 +25,10 @@ extension MoreView {
 
 // MARK: - Actions
 extension MoreView.ViewModel {
+    
+    func onAccountTapped() {
+        navDelegate?.onMoreViewAccountTapped()
+    }
     
     func onLocationsTapped() {
         navDelegate?.onMoreViewLocationsTapped()

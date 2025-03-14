@@ -15,7 +15,7 @@ class HostingController<Content: View, VM: BaseViewModel>: UIHostingController<C
     init(rootView: Content, viewModel: VM) {
         self.viewModel = viewModel
         super.init(rootView: rootView)
-        viewModel.hostingCongroller = self
+        viewModel.hostingController = self
     }
     
     required init?(coder aDecoder: NSCoder) {

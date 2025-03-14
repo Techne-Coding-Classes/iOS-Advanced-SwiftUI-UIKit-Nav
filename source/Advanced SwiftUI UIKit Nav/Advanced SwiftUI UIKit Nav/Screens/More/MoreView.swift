@@ -14,6 +14,10 @@ struct MoreView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 10) {
+                MoreOptionView(title: "Account", imageName: "person.crop.circle") {
+                    viewModel.onAccountTapped()
+                }
+                
                 MoreOptionView(title: "Locations", imageName: "mappin.and.ellipse") {
                     viewModel.onLocationsTapped()
                 }

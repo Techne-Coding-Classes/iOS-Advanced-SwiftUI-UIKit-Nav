@@ -55,6 +55,9 @@
 		08C335872D38871F00EF043E /* AccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C335862D38871F00EF043E /* AccountCoordinator.swift */; };
 		08C335892D3893C800EF043E /* ConfirmEmailCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C335882D3893C800EF043E /* ConfirmEmailCoordinating.swift */; };
 		08C819C62D2F637D00F0205B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C819C52D2F637D00F0205B /* UIViewControllerExtensions.swift */; };
+		08F5409A2D849FB80000540B /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F540992D849FB80000540B /* UserDefaultsManager.swift */; };
+		08F5409C2D84A00E0000540B /* SystemLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F5409B2D84A00E0000540B /* SystemLayer.swift */; };
+		08F5409E2D84A15F0000540B /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F5409D2D84A15F0000540B /* DataLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +111,9 @@
 		08C335862D38871F00EF043E /* AccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinator.swift; sourceTree = "<group>"; };
 		08C335882D3893C800EF043E /* ConfirmEmailCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailCoordinating.swift; sourceTree = "<group>"; };
 		08C819C52D2F637D00F0205B /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		08F540992D849FB80000540B /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		08F5409B2D84A00E0000540B /* SystemLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemLayer.swift; sourceTree = "<group>"; };
+		08F5409D2D84A15F0000540B /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				082BE5232D2985FA00B5B426 /* ModelLayer.swift */,
+				08F540982D849FAA0000540B /* System Layer */,
 				082BE5252D2985FF00B5B426 /* Data Layer */,
 			);
 			path = ModelLayer;
@@ -144,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				082BE5262D29860B00B5B426 /* Database.swift */,
+				08F5409D2D84A15F0000540B /* DataLayer.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -309,9 +317,9 @@
 		08B0557E2D2984FE0012A74B /* Shared Views */ = {
 			isa = PBXGroup;
 			children = (
+				087EE7EE2D29CA4B00A870F6 /* BackgroundView.swift */,
 				08B0557A2D2984FE0012A74B /* EmailField.swift */,
 				087889712D342C9A00601078 /* ListRow.swift */,
-				087EE7EE2D29CA4B00A870F6 /* BackgroundView.swift */,
 				08B0557B2D2984FE0012A74B /* PasswordField.swift */,
 				08B0557D2D2984FE0012A74B /* TextField Styles */,
 			);
@@ -375,6 +383,15 @@
 				08C819C52D2F637D00F0205B /* UIViewControllerExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08F540982D849FAA0000540B /* System Layer */ = {
+			isa = PBXGroup;
+			children = (
+				08F540992D849FB80000540B /* UserDefaultsManager.swift */,
+				08F5409B2D84A00E0000540B /* SystemLayer.swift */,
+			);
+			path = "System Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,6 +479,7 @@
 				087889742D342D7C00601078 /* AccountHostingController.swift in Sources */,
 				087EE7EF2D29CA4B00A870F6 /* BackgroundView.swift in Sources */,
 				086649972D2B093500E7B3A0 /* UpgradeCoordinating.swift in Sources */,
+				08F5409A2D849FB80000540B /* UserDefaultsManager.swift in Sources */,
 				086649852D2AF64600E7B3A0 /* HomeCoordinator.swift in Sources */,
 				086649992D2B09B600E7B3A0 /* UpgradeView.swift in Sources */,
 				086649882D2AFB5600E7B3A0 /* LocationsView.swift in Sources */,
@@ -495,6 +513,8 @@
 				0866499B2D2B09D800E7B3A0 /* UpgradeViewModel.swift in Sources */,
 				082BE53B2D2989C100B5B426 /* AuthCoordinator.swift in Sources */,
 				0822D2892D35DE0000A327D2 /* ConfirmEmailView.swift in Sources */,
+				08F5409C2D84A00E0000540B /* SystemLayer.swift in Sources */,
+				08F5409E2D84A15F0000540B /* DataLayer.swift in Sources */,
 				082BE5362D2988B900B5B426 /* DefaultTextFieldStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ class AuthCoordinator: BaseCoordinator<UINavigationController> {
 extension AuthCoordinator {
     
     func showLoginScreen() {
-        let viewModel = LoginView.ViewModel()
+        let viewModel = LoginView.ViewModel(userDefaults: userDefaults)
         viewModel.navDelegate = self
         
         let view = LoginView(viewModel: viewModel)

@@ -42,6 +42,23 @@ extension AccountCoordinator {
     
 }
 
+// MARK: - Starting Sub-Flows
+extension AccountCoordinator {
+    
+    func startAuthFlow() {
+        let authPresenter = UINavigationController()
+        
+        let authCoordinator = AuthCoordinator(presenter: authPresenter, modelLayer: modelLayer)
+        authCoordinator.delegate = self
+        
+        authCoordinator.start()
+        presenter.present(authCoordinator.presenter, animated: true)
+        
+        store(coordinator: authCoordinator)
+    }
+    
+}
+
 // MARK: - AccountNavDelegate
 extension AccountCoordinator: AccountNavDelegate {
     
@@ -73,6 +90,20 @@ extension AccountCoordinator: EditAccountNavDelegate {
             
         } else {
             
+        }
+    }
+    
+}
+
+// MARK: - AuthCoordinatorDelegate
+extension AccountCoordinator: AuthCoordinatorDelegate {
+    
+    func onAuthCoordinationComplete(authCoordinator: AuthCoordinator) {
+        authCoordinator.presenter.dismiss(animated: true)
+        free(coordinator: authCoordinator)
+        
+        if userDefaults.isLoggedIn {
+            showAccountScreen()
         }
     }
     

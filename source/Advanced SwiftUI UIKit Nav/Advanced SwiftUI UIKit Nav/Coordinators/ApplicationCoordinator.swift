@@ -9,9 +9,6 @@ import UIKit
 
 class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
     
-    var isLoggedIn = false
-    
-    
     let window: UIWindow
 
     private override init(presenter: UINavigationController, modelLayer: ModelLayer) {
@@ -31,7 +28,16 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
     }
     
     override func start() {
-        startMain()
+        if userDefaults.isLoggedIn {
+            startMain()
+        } else {
+            startAuth()
+        }
+    }
+    
+    private func logout() {
+        modelLayer.logout()
+        startAuth()
     }
     
 }
@@ -70,7 +76,7 @@ extension ApplicationCoordinator: AuthCoordinatorDelegate {
 extension ApplicationCoordinator: MainCoordinatorDelegate {
     
     func onMainCoordinationComplete(coordinator: MainCoordinator) {
-        startAuth()
+        logout()
         free(coordinator: coordinator)
     }
     

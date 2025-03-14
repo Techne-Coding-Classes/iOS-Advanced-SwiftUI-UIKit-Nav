@@ -7,4 +7,10 @@
 
 import Foundation
 
-class Database {}
+class Database {
+    
+    func clearAllDBData() {
+        // Clear all data in your data store.
+    }
+    
+}
