@@ -5,9 +5,14 @@
 //  Created by Robert Barber on 1/2/25.
 //
 
+import Combine
 import UIKit
 
 class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
+    
+    let logoutNotification = NotificationCenter.default.publisher(for: .logout)
+    
+    private var cancellables = Set<AnyCancellable>()
     
     let window: UIWindow
 
@@ -25,6 +30,8 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
 
         self.window.rootViewController = presenter
         self.window.makeKeyAndVisible()
+        
+        configure()
     }
     
     override func start() {
@@ -38,6 +45,23 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
     private func logout() {
         modelLayer.logout()
         startAuth()
+    }
+    
+}
+
+// MARK: - Configuration
+private extension ApplicationCoordinator {
+    
+    func configure() {
+        observeLogoutNotification()
+    }
+    
+    func observeLogoutNotification() {
+        logoutNotification
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.logout()
+            }.store(in: &cancellables)
     }
     
 }

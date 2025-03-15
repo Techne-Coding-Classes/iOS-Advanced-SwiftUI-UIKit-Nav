@@ -17,11 +17,8 @@ protocol AccountNavDelegate: AnyObject {
 extension AccountView {
     
     class ViewModel: BaseViewModel, ObservableObject {
-        
         weak var navDelegate: AccountNavDelegate?
-        
         var showExitButton = false
-        
     }
     
 }
@@ -34,7 +31,7 @@ extension AccountView.ViewModel {
     }
     
     func onEditTapped() {
-        navDelegate?.onAccountBackTapped()
+        navDelegate?.onAccountEditTapped()
     }
     
     func onExitTapped() {

@@ -19,7 +19,13 @@ struct EditAccountView: View {
         VStack() {
             LabelledInputView(label: "Name", value: $viewModel.name)
                 .padding(Constants.labelPadding)
-            LabelledInputView(label: "Email", value: $viewModel.email, contentType: .emailAddress)
+            
+            LabelledInputView(
+                label: "Email",
+                value: $viewModel.email,
+                contentType: .emailAddress,
+                autocapitalization: .never
+            )
                 .padding(Constants.labelPadding)
             
             Button("Submit") {
@@ -40,6 +46,7 @@ private extension EditAccountView {
         @Binding var value: String
         var placeholder: String = ""
         var contentType: UITextContentType = .name
+        var autocapitalization: TextInputAutocapitalization?
         
         var body: some View {
             VStack {
@@ -48,6 +55,7 @@ private extension EditAccountView {
                 
                 TextField(placeholder, text: $value)
                     .textContentType(contentType)
+                    .textInputAutocapitalization(autocapitalization)
                     .padding(.vertical, 5)
                     .padding(.horizontal, 10)
                     .background(Color(UIColor.systemGray6)) // Background color for the TextField

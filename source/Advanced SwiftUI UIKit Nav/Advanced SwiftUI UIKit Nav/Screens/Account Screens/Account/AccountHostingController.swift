@@ -30,7 +30,6 @@ private extension AccountHostingController {
         } else {
             setCustomBackButton(target: self, selector: #selector(onBackButtonTapped))
         }
-        
     }
     
 }

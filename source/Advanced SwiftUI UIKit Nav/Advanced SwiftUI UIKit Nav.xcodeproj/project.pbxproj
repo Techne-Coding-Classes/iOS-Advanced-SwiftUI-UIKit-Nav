@@ -58,6 +58,7 @@
 		08F5409A2D849FB80000540B /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F540992D849FB80000540B /* UserDefaultsManager.swift */; };
 		08F5409C2D84A00E0000540B /* SystemLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F5409B2D84A00E0000540B /* SystemLayer.swift */; };
 		08F5409E2D84A15F0000540B /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F5409D2D84A15F0000540B /* DataLayer.swift */; };
+		08F540A02D85F4530000540B /* NotificationNameExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F5409F2D85F4530000540B /* NotificationNameExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		08F540992D849FB80000540B /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		08F5409B2D84A00E0000540B /* SystemLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemLayer.swift; sourceTree = "<group>"; };
 		08F5409D2D84A15F0000540B /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
+		08F5409F2D85F4530000540B /* NotificationNameExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				08C819C52D2F637D00F0205B /* UIViewControllerExtensions.swift */,
+				08F5409F2D85F4530000540B /* NotificationNameExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				08453B922D2DEC2F0016B2B1 /* MoreCoordinator.swift in Sources */,
 				082BE5312D2988AD00B5B426 /* RegisterView.swift in Sources */,
 				082BE5342D2988B400B5B426 /* EmailField.swift in Sources */,
+				08F540A02D85F4530000540B /* NotificationNameExtensions.swift in Sources */,
 				08453B952D2DED1D0016B2B1 /* MoreView.swift in Sources */,
 				0822D2862D35DCD200A327D2 /* EditAccountHostingController.swift in Sources */,
 				08453B972D2DF2B30016B2B1 /* MoreViewModel.swift in Sources */,

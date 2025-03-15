@@ -25,9 +25,10 @@ class AccountCoordinator: BaseCoordinator<UINavigationController>, ConfirmEmailC
 // MARK: - Showing Screens
 extension AccountCoordinator {
     
-    func showAccountScreen() {
+    func showAccountScreen(setAsRootController: Bool = false) {
         let viewModel = AccountView.ViewModel()
         viewModel.navDelegate = self
+        viewModel.showExitButton = !embeddedInExistingNavStack
         
         let view = AccountView(viewModel: viewModel)
         let controller = AccountHostingController(rootView: view, viewModel: viewModel)
@@ -43,23 +44,6 @@ extension AccountCoordinator {
         let view = EditAccountView(viewModel: viewModel)
         let controller = EditAccountHostingController(rootView: view, viewModel: viewModel)
         presenter.pushViewController(controller, animated: true)
-    }
-    
-}
-
-// MARK: - Starting Sub-Flows
-extension AccountCoordinator {
-    
-    func startAuthFlow() {
-        let authPresenter = UINavigationController()
-        
-        let authCoordinator = AuthCoordinator(presenter: authPresenter, modelLayer: modelLayer)
-        authCoordinator.delegate = self
-        
-        authCoordinator.start()
-        presenter.present(authCoordinator.presenter, animated: true)
-        
-        store(coordinator: authCoordinator)
     }
     
 }
@@ -82,7 +66,13 @@ extension AccountCoordinator: AccountNavDelegate {
     }
     
     func onAccountLogoutTapped() {
-        delegate?.onAccountCoordinationLogout(coordinator: self)
+        if !embeddedInExistingNavStack {
+            presenter.dismiss(animated: true) {
+                NotificationCenter.default.post(name: .logout, object: nil)
+            }
+        } else {
+            NotificationCenter.default.post(name: .logout, object: nil)
+        }
     }
     
 }
@@ -99,20 +89,6 @@ extension AccountCoordinator: EditAccountNavDelegate {
             showConfirmEmailScreen()
         } else {
             presenter.popViewController(animated: true)
-        }
-    }
-    
-}
-
-// MARK: - AuthCoordinatorDelegate
-extension AccountCoordinator: AuthCoordinatorDelegate {
-    
-    func onAuthCoordinationComplete(authCoordinator: AuthCoordinator) {
-        authCoordinator.presenter.dismiss(animated: true)
-        free(coordinator: authCoordinator)
-        
-        if userDefaults.isLoggedIn {
-            showAccountScreen()
         }
     }
     

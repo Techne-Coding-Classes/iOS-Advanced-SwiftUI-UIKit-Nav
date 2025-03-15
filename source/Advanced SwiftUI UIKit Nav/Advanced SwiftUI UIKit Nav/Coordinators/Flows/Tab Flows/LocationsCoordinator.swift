@@ -48,6 +48,7 @@ private extension LocationsCoordinator {
         coordinator.delegate = self
         
         coordinator.start()
+        presenter.present(accountPresenter, animated: true)
         
         store(coordinator: coordinator)
     }
