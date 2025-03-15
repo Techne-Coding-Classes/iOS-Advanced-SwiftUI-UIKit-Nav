@@ -45,6 +45,11 @@ struct AccountView: View {
             Button("Edit Account") {
                 viewModel.onEditTapped()
             }
+            .padding(.bottom, 10)
+            
+            Button("Logout") {
+                viewModel.onLogoutTapped()
+            }
             .padding(.bottom, 20)
         }
         .navigationBarBackButtonHidden()

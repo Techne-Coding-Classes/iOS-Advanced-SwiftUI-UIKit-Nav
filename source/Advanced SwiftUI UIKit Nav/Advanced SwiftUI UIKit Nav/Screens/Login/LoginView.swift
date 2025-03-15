@@ -47,7 +47,7 @@ struct LoginView: View {
 
 #Preview {
     NavigationStack {
-        LoginView(viewModel: .init())
+        LoginView(viewModel: .init(userDefaults: .init()))
             .navigationBarTitleDisplayMode(.inline)
     }
 }

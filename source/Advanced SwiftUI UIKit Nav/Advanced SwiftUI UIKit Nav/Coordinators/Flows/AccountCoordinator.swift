@@ -11,7 +11,7 @@ protocol AccountCoordinatorDelegate: AnyObject {
     func onAccountCoordinationComplete(coordinator: AccountCoordinator)
 }
 
-class AccountCoordinator: BaseCoordinator<UINavigationController> {
+class AccountCoordinator: BaseCoordinator<UINavigationController>, ConfirmEmailCoordinating {
     
     weak var delegate: AccountCoordinatorDelegate?
     
@@ -31,6 +31,7 @@ extension AccountCoordinator {
         
         let view = AccountView(viewModel: viewModel)
         let controller = AccountHostingController(rootView: view, viewModel: viewModel)
+        controller.hidesBottomBarWhenPushed = true
         
         pushControllerBasedOnEmbeddedNavState(controller: controller)
     }
@@ -38,6 +39,10 @@ extension AccountCoordinator {
     func showEditAccountScreen() {
         let viewModel = EditAccountView.ViewModel()
         viewModel.navDelegate = self
+        
+        let view = EditAccountView(viewModel: viewModel)
+        let controller = EditAccountHostingController(rootView: view, viewModel: viewModel)
+        presenter.pushViewController(controller, animated: true)
     }
     
 }
@@ -68,12 +73,16 @@ extension AccountCoordinator: AccountNavDelegate {
     }
     
     func onAccountEditTapped() {
-        
+        showEditAccountScreen()
     }
     
     func onAccountExitTapped() {
         presenter.dismiss(animated: true)
         delegate?.onAccountCoordinationComplete(coordinator: self)
+    }
+    
+    func onAccountLogoutTapped() {
+        delegate?.onAccountCoordinationLogout(coordinator: self)
     }
     
 }
@@ -82,14 +91,14 @@ extension AccountCoordinator: AccountNavDelegate {
 extension AccountCoordinator: EditAccountNavDelegate {
     
     func onEditAccountBackTapped() {
-        
+        presenter.popViewController(animated: true)
     }
     
     func onEditAccountSubmitTapped(editedEmail: Bool) {
         if editedEmail {
-            
+            showConfirmEmailScreen()
         } else {
-            
+            presenter.popViewController(animated: true)
         }
     }
     
@@ -105,6 +114,23 @@ extension AccountCoordinator: AuthCoordinatorDelegate {
         if userDefaults.isLoggedIn {
             showAccountScreen()
         }
+    }
+    
+}
+
+// MARK: - ConfirmEmailNavDelegate
+extension AccountCoordinator {
+    
+    func onConfirmEmailSubmit() {
+        if let accountController = presenter.viewControllers.first(where: { $0 is AccountHostingController }) {
+            presenter.popToViewController(accountController, animated: true)
+        } else {
+            presenter.popViewController(animated: true)
+        }
+    }
+    
+    func onConfirmEmailBackButtonTapped() {
+        presenter.popViewController(animated: true)
     }
     
 }

@@ -11,6 +11,7 @@ protocol AccountNavDelegate: AnyObject {
     func onAccountBackTapped()
     func onAccountExitTapped()
     func onAccountEditTapped()
+    func onAccountLogoutTapped()
 }
 
 extension AccountView {
@@ -38,6 +39,10 @@ extension AccountView.ViewModel {
     
     func onExitTapped() {
         navDelegate?.onAccountExitTapped()
+    }
+    
+    func onLogoutTapped() {
+        navDelegate?.onAccountLogoutTapped()
     }
     
 }

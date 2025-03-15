@@ -30,6 +30,7 @@ private extension AccountHostingController {
         } else {
             setCustomBackButton(target: self, selector: #selector(onBackButtonTapped))
         }
+        
     }
     
 }
@@ -44,6 +45,5 @@ extension AccountHostingController {
     @objc func onExitButtonTapped() {
         viewModel.onExitTapped()
     }
-    
     
 }

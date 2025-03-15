@@ -41,7 +41,11 @@ private extension MoreCoordinator {
     }
     
     func startAccountFlow() {
+        let coordinator = AccountCoordinator(presenter: presenter, modelLayer: modelLayer)
+        coordinator.delegate = self
+        coordinator.start()
         
+        store(coordinator: coordinator)
     }
     
 }
@@ -50,7 +54,7 @@ private extension MoreCoordinator {
 extension MoreCoordinator: MoreViewNavDelegate {
     
     func onMoreViewAccountTapped() {
-        
+        startAccountFlow()
     }
     
     func onMoreViewLocationsTapped() {
@@ -67,6 +71,17 @@ extension MoreCoordinator: MoreViewNavDelegate {
 extension MoreCoordinator: LocationsCoordinatorDelegate {
     
     func onLocationsCoordinationComplete(coordinator: LocationsCoordinator) {
+        presenter.popViewController(animated: true)
+        free(coordinator: coordinator)
+    }
+    
+}
+
+// MARK: - AccountCoordinatorDelegate
+extension MoreCoordinator: AccountCoordinatorDelegate {
+    
+    func onAccountCoordinationComplete(coordinator: AccountCoordinator) {
+        presenter.popViewController(animated: true)
         free(coordinator: coordinator)
     }
     

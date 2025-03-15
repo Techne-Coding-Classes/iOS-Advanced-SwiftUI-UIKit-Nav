@@ -39,13 +39,25 @@ private extension LocationsCoordinator {
     
 }
 
+// MARK: - Starting Sub Flows
+private extension LocationsCoordinator {
+    
+    func startAccountFlow() {
+        let accountPresenter = UINavigationController()
+        let coordinator = AccountCoordinator(presenter: accountPresenter, modelLayer: modelLayer)
+        coordinator.delegate = self
+        
+        coordinator.start()
+        
+        store(coordinator: coordinator)
+    }
+    
+}
+
 // MARK: - LocationsNavDelegate
 extension LocationsCoordinator: LocationsNavDelegate {
     
     func onLocationsBackTapped() {
-        // In a more complex flow we would pop to the viewController that is below
-        // all of this coordinator's nav stack.
-        presenter.popViewController(animated: true)
         delegate?.onLocationsCoordinationComplete(coordinator: self)
     }
     
@@ -54,7 +66,17 @@ extension LocationsCoordinator: LocationsNavDelegate {
     }
     
     func onLocationsYourAccountTapped() {
-        
+        startAccountFlow()
+    }
+    
+}
+
+// MARK: - AccountCoordinatorDelegate
+extension LocationsCoordinator: AccountCoordinatorDelegate {
+    
+    func onAccountCoordinationComplete(coordinator: AccountCoordinator) {
+        coordinator.presenter.dismiss(animated: true)
+        free(coordinator: coordinator)
     }
     
 }
