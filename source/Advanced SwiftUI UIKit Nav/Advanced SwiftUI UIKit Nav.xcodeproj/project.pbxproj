@@ -142,9 +142,9 @@
 		082BE5222D2985ED00B5B426 /* ModelLayer */ = {
 			isa = PBXGroup;
 			children = (
+				082BE5252D2985FF00B5B426 /* Data Layer */,
 				082BE5232D2985FA00B5B426 /* ModelLayer.swift */,
 				08F540982D849FAA0000540B /* System Layer */,
-				082BE5252D2985FF00B5B426 /* Data Layer */,
 			);
 			path = ModelLayer;
 			sourceTree = "<group>";
@@ -215,9 +215,9 @@
 		0838EA912D276B4100DB4326 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				0838EA942D276D6900DB4326 /* Supporting */,
 				0838EA952D276D8600DB4326 /* ApplicationCoordinator.swift */,
 				082BE5382D2989AC00B5B426 /* Flows */,
+				0838EA942D276D6900DB4326 /* Supporting */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -358,8 +358,8 @@
 		08B0558B2D2985120012A74B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				0822D2872D35DDE600A327D2 /* Confirm Email */,
 				0878896B2D34298800601078 /* Account Screens */,
+				0822D2872D35DDE600A327D2 /* Confirm Email */,
 				08B055822D2985120012A74B /* Home */,
 				086649862D2AFB4600E7B3A0 /* Locations */,
 				08B055862D2985120012A74B /* Login */,
@@ -373,8 +373,8 @@
 		08B0558D2D2985500012A74B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				082BE50D2D29859000B5B426 /* HostingController.swift */,
 				0866498B2D2AFBB000E7B3A0 /* BaseViewModel.swift */,
+				082BE50D2D29859000B5B426 /* HostingController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -382,8 +382,8 @@
 		08C819C42D2F636800F0205B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				08C819C52D2F637D00F0205B /* UIViewControllerExtensions.swift */,
 				08F5409F2D85F4530000540B /* NotificationNameExtensions.swift */,
+				08C819C52D2F637D00F0205B /* UIViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
