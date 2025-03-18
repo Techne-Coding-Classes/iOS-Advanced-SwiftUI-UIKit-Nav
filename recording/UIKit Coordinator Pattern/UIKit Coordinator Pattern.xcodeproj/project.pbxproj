@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050E59F12D89C128005F0492 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E59F02D89C128005F0492 /* LoginView.swift */; };
+		050E59F42D89C1FE005F0492 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E59F32D89C1FE005F0492 /* EmailField.swift */; };
+		050E59F72D89C24C005F0492 /* DefaultTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E59F62D89C24C005F0492 /* DefaultTextFieldStyle.swift */; };
+		050E59F92D89C41E005F0492 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E59F82D89C41E005F0492 /* PasswordField.swift */; };
+		050E59FB2D89C55B005F0492 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E59FA2D89C55B005F0492 /* LoginViewModel.swift */; };
+		050E59FE2D89C5AE005F0492 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E59FD2D89C5AE005F0492 /* BaseViewModel.swift */; };
+		050E5A002D89C5E8005F0492 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E59FF2D89C5E8005F0492 /* HostingController.swift */; };
+		050E5A022D89C831005F0492 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E5A012D89C831005F0492 /* AuthCoordinator.swift */; };
+		050E5A062D89CA70005F0492 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E5A052D89CA70005F0492 /* RegisterView.swift */; };
+		050E5A082D89CA8C005F0492 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050E5A072D89CA8C005F0492 /* RegisterViewModel.swift */; };
 		05EBAE9F2D871C3C007A8E48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05EBAE9A2D871C3C007A8E48 /* Assets.xcassets */; };
 		05EBAEA12D871C3C007A8E48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05EBAE9D2D871C3C007A8E48 /* LaunchScreen.storyboard */; };
 		05EBAEA22D871C3C007A8E48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EBAE992D871C3C007A8E48 /* AppDelegate.swift */; };
@@ -16,6 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		050E59F02D89C128005F0492 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		050E59F32D89C1FE005F0492 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		050E59F62D89C24C005F0492 /* DefaultTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextFieldStyle.swift; sourceTree = "<group>"; };
+		050E59F82D89C41E005F0492 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		050E59FA2D89C55B005F0492 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		050E59FD2D89C5AE005F0492 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		050E59FF2D89C5E8005F0492 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		050E5A012D89C831005F0492 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		050E5A052D89CA70005F0492 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		050E5A072D89CA8C005F0492 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		05EBAE812D871B6E007A8E48 /* UIKit Coordinator Pattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit Coordinator Pattern.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05EBAE992D871C3C007A8E48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05EBAE9A2D871C3C007A8E48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +57,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050E59EF2D89C111005F0492 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				050E59F02D89C128005F0492 /* LoginView.swift */,
+				050E59FA2D89C55B005F0492 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		050E59F22D89C1E6005F0492 /* Shared Views */ = {
+			isa = PBXGroup;
+			children = (
+				050E59F32D89C1FE005F0492 /* EmailField.swift */,
+				050E59F82D89C41E005F0492 /* PasswordField.swift */,
+				050E59F52D89C237005F0492 /* TextField Styles */,
+			);
+			path = "Shared Views";
+			sourceTree = "<group>";
+		};
+		050E59F52D89C237005F0492 /* TextField Styles */ = {
+			isa = PBXGroup;
+			children = (
+				050E59F62D89C24C005F0492 /* DefaultTextFieldStyle.swift */,
+			);
+			path = "TextField Styles";
+			sourceTree = "<group>";
+		};
+		050E59FC2D89C59A005F0492 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				050E59FD2D89C5AE005F0492 /* BaseViewModel.swift */,
+				050E59FF2D89C5E8005F0492 /* HostingController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		050E5A032D89C838005F0492 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				050E5A012D89C831005F0492 /* AuthCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		050E5A042D89CA62005F0492 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				050E5A052D89CA70005F0492 /* RegisterView.swift */,
+				050E5A072D89CA8C005F0492 /* RegisterViewModel.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		05EBAE782D871B6E007A8E48 = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +132,11 @@
 				05EBAE992D871C3C007A8E48 /* AppDelegate.swift */,
 				05EBAE9A2D871C3C007A8E48 /* Assets.xcassets */,
 				05EBAEA62D871E32007A8E48 /* Coordinators (Navigation) */,
+				050E59FC2D89C59A005F0492 /* Core */,
 				05EBAE9B2D871C3C007A8E48 /* Info.plist */,
 				05EBAE9D2D871C3C007A8E48 /* LaunchScreen.storyboard */,
 				05EBAEA32D871C6C007A8E48 /* Screens */,
+				050E59F22D89C1E6005F0492 /* Shared Views */,
 			);
 			path = "UIKit Coordinator Pattern";
 			sourceTree = "<group>";
@@ -70,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				05EBAEA42D871C9D007A8E48 /* TestView.swift */,
+				050E5A042D89CA62005F0492 /* Register */,
+				050E59EF2D89C111005F0492 /* Login */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -78,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				05EBAEA72D871E4F007A8E48 /* ApplicationCoordinator.swift */,
+				050E5A032D89C838005F0492 /* Flows */,
 				05EBAEA92D871E65007A8E48 /* Supporting */,
 			);
 			path = "Coordinators (Navigation)";
@@ -164,10 +242,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				050E59F72D89C24C005F0492 /* DefaultTextFieldStyle.swift in Sources */,
+				050E59FE2D89C5AE005F0492 /* BaseViewModel.swift in Sources */,
+				050E5A062D89CA70005F0492 /* RegisterView.swift in Sources */,
 				05EBAEA52D871C9D007A8E48 /* TestView.swift in Sources */,
+				050E59F42D89C1FE005F0492 /* EmailField.swift in Sources */,
 				05EBAEA22D871C3C007A8E48 /* AppDelegate.swift in Sources */,
 				05EBAEA82D871E4F007A8E48 /* ApplicationCoordinator.swift in Sources */,
+				050E59F92D89C41E005F0492 /* PasswordField.swift in Sources */,
+				050E59F12D89C128005F0492 /* LoginView.swift in Sources */,
+				050E5A082D89CA8C005F0492 /* RegisterViewModel.swift in Sources */,
 				05EBAEAB2D871E77007A8E48 /* BaseCoordinator.swift in Sources */,
+				050E5A002D89C5E8005F0492 /* HostingController.swift in Sources */,
+				050E5A022D89C831005F0492 /* AuthCoordinator.swift in Sources */,
+				050E59FB2D89C55B005F0492 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

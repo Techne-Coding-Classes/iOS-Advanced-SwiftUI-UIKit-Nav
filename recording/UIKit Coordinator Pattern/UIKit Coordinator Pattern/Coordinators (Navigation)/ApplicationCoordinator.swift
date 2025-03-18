@@ -16,7 +16,6 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
         self.window = window
         
         let presenter = UINavigationController()
-        presenter.isToolbarHidden = true
         
         super.init(presenter: presenter)
         
@@ -34,9 +33,28 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
 extension ApplicationCoordinator {
     
     func startAuth() {
-        let view = TestView()
-        let controller = UIHostingController(rootView: view)
-        presenter.setViewControllers([controller], animated: false)
+        let authCoordinator = AuthCoordinator(presenter: presenter)
+        authCoordinator.delegate = self
+        authCoordinator.start()
+        
+        self.store(coordinator: authCoordinator)
+    }
+    
+    func startMain() {
+        let testView = TestView()
+        
+        let controller = UIHostingController(rootView: testView)
+        controller.title = "Test View"
+        presenter.setViewControllers([controller], animated: true)
+    }
+    
+}
+
+extension ApplicationCoordinator: AuthCoordinatorDelegate {
+    
+    func onAuthCoordinationComplete(authCoordinator: AuthCoordinator) {
+        startMain()
+        self.free(coordinator: authCoordinator)
     }
     
 }
