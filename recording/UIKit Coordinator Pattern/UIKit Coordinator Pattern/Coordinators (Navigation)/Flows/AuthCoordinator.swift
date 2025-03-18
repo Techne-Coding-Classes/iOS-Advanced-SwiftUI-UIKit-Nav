@@ -22,7 +22,7 @@ class AuthCoordinator: BaseCoordinator<UINavigationController> {
 }
 
 // MARK: - Showing Screens
-extension AuthCoordinator {
+private extension AuthCoordinator {
     
     func showLoginScreen() {
         let viewModel = LoginView.ViewModel()
