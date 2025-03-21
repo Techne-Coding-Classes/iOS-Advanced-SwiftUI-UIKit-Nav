@@ -18,7 +18,6 @@ struct DefaultTextFieldStyle: TextFieldStyle {
                 RoundedRectangle(cornerRadius: 5)
                     .stroke(.black, lineWidth: 1)
             }
-        
     }
     
 }

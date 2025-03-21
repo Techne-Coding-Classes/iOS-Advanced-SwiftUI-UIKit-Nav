@@ -35,6 +35,15 @@
 		05EBAEA22D871C3C007A8E48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EBAE992D871C3C007A8E48 /* AppDelegate.swift */; };
 		05EBAEA82D871E4F007A8E48 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EBAEA72D871E4F007A8E48 /* ApplicationCoordinator.swift */; };
 		05EBAEAB2D871E77007A8E48 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EBAEAA2D871E77007A8E48 /* BaseCoordinator.swift */; };
+		05FA3FDC2D8DDFF9009AB3DD /* EditAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA3FDB2D8DDFF9009AB3DD /* EditAccountView.swift */; };
+		05FA3FDE2D8DE03B009AB3DD /* EditAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA3FDD2D8DE03B009AB3DD /* EditAccountViewModel.swift */; };
+		05FA3FE02D8DE4C8009AB3DD /* EditAccountHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA3FDF2D8DE4C8009AB3DD /* EditAccountHostingController.swift */; };
+		05FA3FE62D8DE624009AB3DD /* ConfirmEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA3FE52D8DE624009AB3DD /* ConfirmEmailViewModel.swift */; };
+		05FA3FE82D8DE635009AB3DD /* ConfirmEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA3FE72D8DE635009AB3DD /* ConfirmEmailView.swift */; };
+		05FA3FEA2D8DE801009AB3DD /* ConfirmEmailHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA3FE92D8DE801009AB3DD /* ConfirmEmailHostingController.swift */; };
+		05FA3FEC2D8DE8B6009AB3DD /* AccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA3FEB2D8DE8B6009AB3DD /* AccountCoordinator.swift */; };
+		05FA3FEF2D8DEF02009AB3DD /* ConfirmEmailCoordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA3FEE2D8DEF02009AB3DD /* ConfirmEmailCoordinating.swift */; };
+		05FA3FF12D8DF1E3009AB3DD /* NotificationNameExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA3FF02D8DF1E3009AB3DD /* NotificationNameExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +77,15 @@
 		05EBAE9C2D871C3C007A8E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05EBAEA72D871E4F007A8E48 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		05EBAEAA2D871E77007A8E48 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		05FA3FDB2D8DDFF9009AB3DD /* EditAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountView.swift; sourceTree = "<group>"; };
+		05FA3FDD2D8DE03B009AB3DD /* EditAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewModel.swift; sourceTree = "<group>"; };
+		05FA3FDF2D8DE4C8009AB3DD /* EditAccountHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountHostingController.swift; sourceTree = "<group>"; };
+		05FA3FE52D8DE624009AB3DD /* ConfirmEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailViewModel.swift; sourceTree = "<group>"; };
+		05FA3FE72D8DE635009AB3DD /* ConfirmEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailView.swift; sourceTree = "<group>"; };
+		05FA3FE92D8DE801009AB3DD /* ConfirmEmailHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailHostingController.swift; sourceTree = "<group>"; };
+		05FA3FEB2D8DE8B6009AB3DD /* AccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinator.swift; sourceTree = "<group>"; };
+		05FA3FEE2D8DEF02009AB3DD /* ConfirmEmailCoordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmEmailCoordinating.swift; sourceTree = "<group>"; };
+		05FA3FF02D8DF1E3009AB3DD /* NotificationNameExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +141,7 @@
 			children = (
 				050E5A012D89C831005F0492 /* AuthCoordinator.swift */,
 				0551C1322D89FF29003FE2A1 /* MainCoordinator.swift */,
+				05FA3FEB2D8DE8B6009AB3DD /* AccountCoordinator.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -175,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				0551C1422D8A0772003FE2A1 /* Account */,
+				05FA3FDA2D8DDFD5009AB3DD /* Edit Account */,
 			);
 			path = "Account Screens";
 			sourceTree = "<group>";
@@ -193,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				0551C14C2D8A0DCE003FE2A1 /* UIViewControllerExtensions.swift */,
+				05FA3FF02D8DF1E3009AB3DD /* NotificationNameExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				0551C1412D8A076A003FE2A1 /* Account Screens */,
+				05FA3FE12D8DE609009AB3DD /* Confirm Email */,
 				0551C12F2D89FE11003FE2A1 /* Home */,
 				0551C1392D8A01D7003FE2A1 /* Locations */,
 				050E59EF2D89C111005F0492 /* Login */,
@@ -247,16 +269,45 @@
 			children = (
 				05EBAEA72D871E4F007A8E48 /* ApplicationCoordinator.swift */,
 				050E5A032D89C838005F0492 /* Flows */,
-				05EBAEA92D871E65007A8E48 /* Supporting */,
+				05EBAEA92D871E65007A8E48 /* Structure */,
+				05FA3FED2D8DEEEA009AB3DD /* Supporting */,
 				0551C1342D8A008E003FE2A1 /* Tab Flows */,
 			);
 			path = "Coordinators (Navigation)";
 			sourceTree = "<group>";
 		};
-		05EBAEA92D871E65007A8E48 /* Supporting */ = {
+		05EBAEA92D871E65007A8E48 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
 				05EBAEAA2D871E77007A8E48 /* BaseCoordinator.swift */,
+			);
+			path = Structure;
+			sourceTree = "<group>";
+		};
+		05FA3FDA2D8DDFD5009AB3DD /* Edit Account */ = {
+			isa = PBXGroup;
+			children = (
+				05FA3FDB2D8DDFF9009AB3DD /* EditAccountView.swift */,
+				05FA3FDD2D8DE03B009AB3DD /* EditAccountViewModel.swift */,
+				05FA3FDF2D8DE4C8009AB3DD /* EditAccountHostingController.swift */,
+			);
+			path = "Edit Account";
+			sourceTree = "<group>";
+		};
+		05FA3FE12D8DE609009AB3DD /* Confirm Email */ = {
+			isa = PBXGroup;
+			children = (
+				05FA3FE72D8DE635009AB3DD /* ConfirmEmailView.swift */,
+				05FA3FE52D8DE624009AB3DD /* ConfirmEmailViewModel.swift */,
+				05FA3FE92D8DE801009AB3DD /* ConfirmEmailHostingController.swift */,
+			);
+			path = "Confirm Email";
+			sourceTree = "<group>";
+		};
+		05FA3FED2D8DEEEA009AB3DD /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				05FA3FEE2D8DEF02009AB3DD /* ConfirmEmailCoordinating.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -337,11 +388,15 @@
 				050E59F72D89C24C005F0492 /* DefaultTextFieldStyle.swift in Sources */,
 				050E59FE2D89C5AE005F0492 /* BaseViewModel.swift in Sources */,
 				050E5A062D89CA70005F0492 /* RegisterView.swift in Sources */,
+				05FA3FE02D8DE4C8009AB3DD /* EditAccountHostingController.swift in Sources */,
 				0551C1362D8A00A1003FE2A1 /* HomeCoordinator.swift in Sources */,
 				0551C1312D89FE2A003FE2A1 /* HomeView.swift in Sources */,
 				050E59F42D89C1FE005F0492 /* EmailField.swift in Sources */,
 				05EBAEA22D871C3C007A8E48 /* AppDelegate.swift in Sources */,
 				0551C14F2D8A1087003FE2A1 /* MoreViewModel.swift in Sources */,
+				05FA3FE62D8DE624009AB3DD /* ConfirmEmailViewModel.swift in Sources */,
+				05FA3FEF2D8DEF02009AB3DD /* ConfirmEmailCoordinating.swift in Sources */,
+				05FA3FDE2D8DE03B009AB3DD /* EditAccountViewModel.swift in Sources */,
 				05EBAEA82D871E4F007A8E48 /* ApplicationCoordinator.swift in Sources */,
 				0551C1462D8A0919003FE2A1 /* ListRow.swift in Sources */,
 				050E59F92D89C41E005F0492 /* PasswordField.swift in Sources */,
@@ -351,13 +406,18 @@
 				050E59F12D89C128005F0492 /* LoginView.swift in Sources */,
 				0551C14A2D8A0CBF003FE2A1 /* AccountHostingController.swift in Sources */,
 				0551C1402D8A0220003FE2A1 /* MoreCoordinator.swift in Sources */,
+				05FA3FEA2D8DE801009AB3DD /* ConfirmEmailHostingController.swift in Sources */,
 				050E5A082D89CA8C005F0492 /* RegisterViewModel.swift in Sources */,
 				0551C14D2D8A0DCE003FE2A1 /* UIViewControllerExtensions.swift in Sources */,
+				05FA3FF12D8DF1E3009AB3DD /* NotificationNameExtensions.swift in Sources */,
 				05EBAEAB2D871E77007A8E48 /* BaseCoordinator.swift in Sources */,
 				050E5A002D89C5E8005F0492 /* HostingController.swift in Sources */,
+				05FA3FDC2D8DDFF9009AB3DD /* EditAccountView.swift in Sources */,
 				0551C1382D8A01BB003FE2A1 /* LocationsCoordinator.swift in Sources */,
 				050E5A022D89C831005F0492 /* AuthCoordinator.swift in Sources */,
 				0551C1442D8A0781003FE2A1 /* AccountView.swift in Sources */,
+				05FA3FEC2D8DE8B6009AB3DD /* AccountCoordinator.swift in Sources */,
+				05FA3FE82D8DE635009AB3DD /* ConfirmEmailView.swift in Sources */,
 				050E59FB2D89C55B005F0492 /* LoginViewModel.swift in Sources */,
 				0551C13E2D8A020B003FE2A1 /* MoreView.swift in Sources */,
 			);

@@ -5,12 +5,17 @@
 //  Created by Techne Coding on 3/16/25.
 //
 
+import Combine
 import UIKit
 import SwiftUI
 
 class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
     
+    let logoutNotification = NotificationCenter.default.publisher(for: .logout)
+    
     let window: UIWindow
+    
+    private var cancellables = Set<AnyCancellable>()
     
     init(window: UIWindow) {
         self.window = window
@@ -21,10 +26,30 @@ class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
         
         self.window.rootViewController = presenter
         self.window.makeKeyAndVisible()
+        
+        configure()
     }
     
     override func start() {
         startAuth()
+    }
+    
+    private func logout() {
+        startAuth()
+    }
+    
+}
+
+// MARK: - Configuration
+private extension ApplicationCoordinator {
+    
+    func configure() {
+        logoutNotification
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self else { return }
+                logout()
+            }.store(in: &cancellables)
     }
     
 }
