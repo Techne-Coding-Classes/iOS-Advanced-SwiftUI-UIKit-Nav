@@ -22,6 +22,12 @@ extension LoginView {
         
         weak var navDelegate: LoginNavDelegate?
         
+        let userDefaults: UserDefaultsManager
+        
+        init(userDefaults: UserDefaultsManager) {
+            self.userDefaults = userDefaults
+        }
+        
     }
     
 }
@@ -30,6 +36,7 @@ extension LoginView {
 extension LoginView.ViewModel {
     
     func onLoginTapped() {
+        userDefaults.isLoggedIn = true
         navDelegate?.onLoginLoginSuccessfull()
     }
     

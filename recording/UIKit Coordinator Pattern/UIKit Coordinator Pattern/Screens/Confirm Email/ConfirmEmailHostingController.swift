@@ -23,7 +23,7 @@ extension ConfirmEmailHostingController {
 private extension ConfirmEmailHostingController {
     
     func setupViews() {
-        title = "ConfirmEmail"
+        title = "Confirm Email"
         
         setCustomBackButton(target: self, selector: #selector(onBackTapped))
     }

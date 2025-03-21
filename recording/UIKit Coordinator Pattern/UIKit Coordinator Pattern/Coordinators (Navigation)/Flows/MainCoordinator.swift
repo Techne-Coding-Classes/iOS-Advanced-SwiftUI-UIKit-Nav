@@ -61,7 +61,7 @@ private extension MainCoordinator {
             tag: NavigationBarTag.home.rawValue
         )
         
-        let coordinator = HomeCoordinator(presenter: flowPresenter)
+        let coordinator = HomeCoordinator(presenter: flowPresenter, modelLayer: modelLayer)
         coordinator.start()
         
         store(coordinator: coordinator)
@@ -76,7 +76,7 @@ private extension MainCoordinator {
             tag: NavigationBarTag.locations.rawValue
         )
         
-        let coordinator = LocationsCoordinator(presenter: flowPresenter)
+        let coordinator = LocationsCoordinator(presenter: flowPresenter, modelLayer: modelLayer)
         coordinator.start()
         
         store(coordinator: coordinator)
@@ -91,7 +91,7 @@ private extension MainCoordinator {
             tag: NavigationBarTag.more.rawValue
         )
         
-        let coordinator = MoreCoordinator(presenter: flowPresenter)
+        let coordinator = MoreCoordinator(presenter: flowPresenter, modelLayer: modelLayer)
         coordinator.delegate = self
         coordinator.start()
         

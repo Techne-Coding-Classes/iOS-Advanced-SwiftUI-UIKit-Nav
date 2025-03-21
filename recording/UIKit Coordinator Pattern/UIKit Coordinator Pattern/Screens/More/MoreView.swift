@@ -17,6 +17,14 @@ struct MoreView: View {
                 ListRow(title: "Account", systemImageName: "person.crop.circle") {
                     viewModel.onAccountTapped()
                 }
+                
+                ListRow(title: "Locations", systemImageName: "mappin.and.ellipse") {
+                    viewModel.onLocationsTapped()
+                }
+                
+                ListRow(title: "Upgrade", systemImageName: "crown") {
+                    viewModel.onUpgradeTapped()
+                }
             }
         }
     }

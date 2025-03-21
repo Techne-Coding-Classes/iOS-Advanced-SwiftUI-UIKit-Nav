@@ -8,13 +8,34 @@
 import SwiftUI
 
 struct LocationsView: View {
+    
+    @StateObject var viewModel: ViewModel
+    
+    private let locations = [
+        "Syndney, Australia",
+        "New York, New York",
+        "Ontario, Canada",
+        "Houston, Texas"
+    ]
+    
     var body: some View {
-        Text("Locations")
-            .navigationBarBackButtonHidden()
+        ScrollView {
+            VStack {
+                ForEach(Array(locations.enumerated()), id: \.offset) { _, location in
+                    ListRow(title: location)
+                }
+                
+                Button("Your Account") {
+                    viewModel.onYourAccountTapped()
+                }
+                .padding(.top, 10)
+            }
+        }
+        .navigationBarBackButtonHidden()
     }
         
 }
 
 #Preview {
-    LocationsView()
+    LocationsView(viewModel: .init())
 }

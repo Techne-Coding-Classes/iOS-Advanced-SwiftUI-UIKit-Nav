@@ -11,7 +11,7 @@ protocol AuthCoordinatorDelegate: AnyObject {
     func onAuthCoordinationComplete(authCoordinator: AuthCoordinator)
 }
 
-class AuthCoordinator: BaseCoordinator<UINavigationController> {
+class AuthCoordinator: BaseCoordinator<UINavigationController>, ConfirmEmailCoordinating {
     
     weak var delegate: AuthCoordinatorDelegate?
     
@@ -25,7 +25,7 @@ class AuthCoordinator: BaseCoordinator<UINavigationController> {
 private extension AuthCoordinator {
     
     func showLoginScreen() {
-        let viewModel = LoginView.ViewModel()
+        let viewModel = LoginView.ViewModel(userDefaults: userDefaults)
         viewModel.navDelegate = self
         
         let view = LoginView(viewModel: viewModel)
@@ -64,11 +64,24 @@ extension AuthCoordinator: LoginNavDelegate {
 extension AuthCoordinator: RegisterNavDelegate {
     
     func onRegisterComplete() {
-        showLoginScreen()
+        showConfirmEmailScreen()
     }
     
     func onRegisterLoginTapped() {
         showLoginScreen()
+    }
+    
+}
+
+// MARK: - ConfirmEmailNavDelegate
+extension AuthCoordinator {
+    
+    func onConfirmEmailSubmit() {
+        showLoginScreen()
+    }
+    
+    func onConfirmEmailBackButtonTapped() {
+        presenter.popViewController(animated: true)
     }
     
 }
